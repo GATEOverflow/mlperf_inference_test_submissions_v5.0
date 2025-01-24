@@ -1,20 +1,20 @@
 Please download [summary.xlsx](summary.xlsx) to view the most recent results. 
  ```
-[2025-01-24 20:59:16,231 submission_checker1.py:3259 INFO] Results=35, NoResults=0, Power Results=0
-[2025-01-24 20:59:16,231 submission_checker1.py:3266 INFO] ---
-[2025-01-24 20:59:16,231 submission_checker1.py:3267 INFO] Closed Results=2, Closed Power Results=0
+[2025-01-24 21:45:25,505 submission_checker1.py:3259 INFO] Results=35, NoResults=0, Power Results=0
+[2025-01-24 21:45:25,505 submission_checker1.py:3266 INFO] ---
+[2025-01-24 21:45:25,505 submission_checker1.py:3267 INFO] Closed Results=2, Closed Power Results=0
 
-[2025-01-24 20:59:16,231 submission_checker1.py:3272 INFO] Open Results=33, Open Power Results=0
+[2025-01-24 21:45:25,505 submission_checker1.py:3272 INFO] Open Results=33, Open Power Results=0
 
-[2025-01-24 20:59:16,231 submission_checker1.py:3277 INFO] Network Results=0, Network Power Results=0
+[2025-01-24 21:45:25,505 submission_checker1.py:3277 INFO] Network Results=0, Network Power Results=0
 
-[2025-01-24 20:59:16,231 submission_checker1.py:3282 INFO] ---
-[2025-01-24 20:59:16,231 submission_checker1.py:3284 INFO] Systems=26, Power Systems=0
-[2025-01-24 20:59:16,231 submission_checker1.py:3288 INFO] Closed Systems=1, Closed Power Systems=0
-[2025-01-24 20:59:16,231 submission_checker1.py:3293 INFO] Open Systems=26, Open Power Systems=0
-[2025-01-24 20:59:16,231 submission_checker1.py:3298 INFO] Network Systems=0, Network Power Systems=0
-[2025-01-24 20:59:16,231 submission_checker1.py:3303 INFO] ---
-[2025-01-24 20:59:16,232 submission_checker1.py:3308 INFO] SUMMARY: submission looks OK
+[2025-01-24 21:45:25,505 submission_checker1.py:3282 INFO] ---
+[2025-01-24 21:45:25,505 submission_checker1.py:3284 INFO] Systems=26, Power Systems=0
+[2025-01-24 21:45:25,505 submission_checker1.py:3288 INFO] Closed Systems=1, Closed Power Systems=0
+[2025-01-24 21:45:25,505 submission_checker1.py:3293 INFO] Open Systems=26, Open Power Systems=0
+[2025-01-24 21:45:25,505 submission_checker1.py:3298 INFO] Network Systems=0, Network Power Systems=0
+[2025-01-24 21:45:25,505 submission_checker1.py:3303 INFO] ---
+[2025-01-24 21:45:25,505 submission_checker1.py:3308 INFO] SUMMARY: submission looks OK
 INFO:root:       ! call "postprocess" from /home/runner/CM/repos/mlcommons@mlperf-automations/script/run-mlperf-inference-submission-checker/customize.py
 
 ```
@@ -55,8 +55,4 @@ INFO:root:       ! call "postprocess" from /home/runner/CM/repos/mlcommons@mlper
 | 31 | MLCommons      | available      | open       | edge         | gh_action             | gh_action-reference-gpu-pytorch_v2.4.1-cu124                           | gptj-99             | gptj-99             | Offline    |    46.0817    | ROUGE1: 32.2581  ROUGE2: 6.6667  ROUGEL: 22.5806  GEN_LEN: 264              |                 1 | Intel(R) Xeon(R) w7-2495X       |                          1 |                          24 | NVIDIA GeForce RTX 4090  |                       2 | open/MLCommons/results/gh_action-reference-gpu-pytorch_v2.4.1-cu124/gptj-99/offline                            | pytorch v2.4.1      | Ubuntu 22.04 (linux-6.2.0-39-generic-glibc2.35) | Automated by MLCommons CM v2.3.9. |            1 |        0 | v5.0      |          0 | False       | Tokens/s  | fp32                |
 | 32 | MLCommons      | available      | open       | edge         | gh_action             | gh_action-reference-gpu-pytorch_v2.4.1-cu124                           | stable-diffusion-xl | stable-diffusion-xl | Offline    |     0.346565  | CLIP_SCORE: 15.18544016778469  FID_SCORE: 235.69504308101006                |                 1 | Intel(R) Xeon(R) w7-2495X       |                          1 |                          24 | NVIDIA GeForce RTX 4090  |                       2 | open/MLCommons/results/gh_action-reference-gpu-pytorch_v2.4.1-cu124/stable-diffusion-xl/offline                | pytorch v2.4.1      | Ubuntu 22.04 (linux-6.2.0-39-generic-glibc2.35) | Automated by MLCommons CM v2.3.9. |            1 |        0 | v5.0      |          0 | False       | Samples/s | fp32                |
 | 33 | MLCommons      | available      | closed     | datacenter   | gh_ubuntu_x86         | gh_ubuntu_x86-nvidia-gpu-TensorRT-default_config                       | resnet50            | resnet              | Server     | 73015.3       | acc: 76.078                                                                 |                 1 | Intel(R) Xeon(R) w7-2495X       |                          1 |                          24 | NVIDIA GeForce RTX 4090  |                       2 | closed/MLCommons/results/gh_ubuntu_x86-nvidia-gpu-TensorRT-default_config/resnet50/server                      | TensorRT            | Ubuntu 20.04 (linux-6.2.0-39-generic-glibc2.31) | Automated by MLCommons CM v3.2.5. |            1 |        0 | v5.0      |          0 | False       | Queries/s | int8                |
-| 34 | MLCommons      | available      | closed     | datacenter   | gh_ubuntu_x86         | gh_ubuntu_x86-nvidia-gpu-TensorRT-default_config                       | resnet50            | resnet              | Offline    | 80458.4       | acc: 76.078                                                                 |                 1 | Intel(R) Xeon(R) w7-2495X       |                          1 |                          24 | NVIDIA GeForce RTX 4090  |                       2 | closed/MLCommons/results/gh_ubuntu_x86-nvidia-gpu-TensorRT-default_config/resnet50/offline                     | TensorRT            | Ubuntu 20.04 (linux-6.2.0-39-generic-glibc2.31) | Automated by MLCommons CM v3.2.5. |            1 |        0 | v5.0      |          0 | False       | Samples/s | int8                |hello
-hello
-hello
-hello
-hello
+| 34 | MLCommons      | available      | closed     | datacenter   | gh_ubuntu_x86         | gh_ubuntu_x86-nvidia-gpu-TensorRT-default_config                       | resnet50            | resnet              | Offline    | 80458.4       | acc: 76.078                                                                 |                 1 | Intel(R) Xeon(R) w7-2495X       |                          1 |                          24 | NVIDIA GeForce RTX 4090  |                       2 | closed/MLCommons/results/gh_ubuntu_x86-nvidia-gpu-TensorRT-default_config/resnet50/offline                     | TensorRT            | Ubuntu 20.04 (linux-6.2.0-39-generic-glibc2.31) | Automated by MLCommons CM v3.2.5. |            1 |        0 | v5.0      |          0 | False       | Samples/s | int8                |
