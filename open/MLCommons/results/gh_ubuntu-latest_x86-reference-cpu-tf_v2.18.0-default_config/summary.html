@@ -1,5 +1,67 @@
 
-See the HTML preview [here](https://htmlpreview.github.io/?https://github.com/mlcommons/mlperf_inference_test_submissions_v5.0/blob/main/closed/MLCommons/results/gh_ubuntu-latest_x86-mlcommons_cpp-cpu-onnxruntime-default_config/summary.html)
+<html>
+
+<head>
+<style type="text/css">
+
+    /* General table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: none;
+}
+
+table.titlebarcontainer,.titlebar {
+    text-align: center !important;
+}
+td.headerbar {
+    text-align: center;
+    font-size: x-large;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* Styling for the first table to make it stand out */
+table:first-of-type {
+    background-color: #e8e8e8; /* Light grey background */
+    color: #333; /* Darker text for contrast */
+    font-weight: bold; /* Makes text bold */
+}
+
+/* Styling inner tables to have borders */
+table table {
+    border: 1px solid #ccc;
+}
+
+/* More specific styling for headers and rows of inner tables */
+table table th, table table td {
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Adjust column widths if necessary */
+th:nth-child(1), td:nth-child(1) { width: 20%; }
+th:nth-child(2), td:nth-child(2) { width: 30%; }
+    
+</style>
+</head>
+
+<body>
 
 
 
@@ -41,7 +103,7 @@ See the HTML preview [here](https://htmlpreview.github.io/?https://github.com/ml
 <table>
             <tr><td><h3>Accelerator Details</h3><table><tr><td>accelerator_frequency</td><td></td></tr><tr><td>accelerator_host_interconnect</td><td>N/A</td></tr><tr><td>accelerator_interconnect</td><td>N/A</td></tr><tr><td>accelerator_interconnect_topology</td><td></td></tr><tr><td>accelerator_memory_capacity</td><td>N/A</td></tr><tr><td>accelerator_memory_configuration</td><td>N/A</td></tr><tr><td>accelerator_model_name</td><td>N/A</td></tr><tr><td>accelerator_on-chip_memories</td><td></td></tr><tr><td>accelerators_per_node</td><td>0</td></tr></table></td> <td><h3>Processor and Memory Details</h3><table><tr><td>host_memory_capacity</td><td>16G</td></tr><tr><td>host_memory_configuration</td><td>undefined</td></tr><tr><td>host_processor_caches</td><td>L1d cache: 64 KiB (2 instances), L1i cache: 64 KiB (2 instances), L2 cache: 1 MiB (2 instances), L3 cache: 32 MiB (1 instance)</td></tr><tr><td>host_processor_core_count</td><td>2</td></tr><tr><td>host_processor_frequency</td><td>undefined</td></tr><tr><td>host_processor_interconnect</td><td></td></tr><tr><td>host_processor_model_name</td><td>AMD EPYC 7763 64-Core Processor</td></tr><tr><td>host_processors_per_node</td><td>1</td></tr></table></td> </tr>
             <tr><td ><h3>Other Hardware Details</h3><table><tr><td>cooling</td><td>air</td></tr><tr><td>hw_notes</td><td></td></tr></table></td> <td><h3>Network and Interconnect Details</h3><table><tr><td>host_network_card_count</td><td>1</td></tr><tr><td>host_networking</td><td>Gig Ethernet</td></tr><tr><td>host_networking_topology</td><td>N/A</td></tr></table></td> </tr>
-            <tr><td colspan="2"><h3>Software Details</h3><table><tr><td>framework</td><td>onnxruntime</td></tr><tr><td>operating_system</td><td>Ubuntu 24.04 (linux-6.8.0-1020-azure-glibc2.39)</td></tr><tr><td>other_software_stack</td><td>Python: 3.12.8, LLVM-18.1.3</td></tr><tr><td>sw_notes</td><td></td></tr></table></td> </tr>
+            <tr><td colspan="2"><h3>Software Details</h3><table><tr><td>framework</td><td>tf v2.18.0</td></tr><tr><td>operating_system</td><td>Ubuntu 24.04 (linux-6.8.0-1020-azure-glibc2.39)</td></tr><tr><td>other_software_stack</td><td>Python: 3.12.8, LLVM-18.1.3</td></tr><tr><td>sw_notes</td><td></td></tr></table></td> </tr>
             </table>
 
 <h3>Results Table</h3>
@@ -58,5 +120,8 @@ See the HTML preview [here](https://htmlpreview.github.io/?https://github.com/ml
     <td>Metric</td>
     <td>Performance</td>
     </tr>
-    <tr><td>retinanet</td><td></td><td></td><td></td><td>Samples/s</td> <td>0.430537</td><tr><td>resnet</td><td></td><td></td><td></td><td>Samples/s</td> <td>23.2405</td></table>
+    <tr><td>resnet</td><td></td><td></td><td></td><td>Samples/s</td> <td>21.033</td></table>
 
+</body>
+</html>
+            
