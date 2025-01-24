@@ -1,0 +1,29 @@
+python3 python/main.py --profile resnet50-tf --model "/home/runner/MLC/repos/local/cache/download-file_b02aeeeb/resnet50_v1.pb" --dataset-path /home/runner/MLC/repos/local/cache/get-preprocessed-dataset-imagenet_78b8c542 --output "/home/runner/MLC/repos/local/cache/get-mlperf-inference-results-dir_f392fc6e/test_results/gh_ubuntu-latest_x86-reference-cpu-tf-v2.18.0-default_config/resnet50/offline/performance/run_1" --scenario Offline --threads 4 --user_conf /home/runner/MLC/repos/GATEOverflow@mlperf-automations/script/generate-mlperf-inference-user-conf/tmp/af65fafff1c4491c81f28f04ee59c707.conf --use_preprocessed_dataset --cache_dir /home/runner/MLC/repos/local/cache/get-preprocessed-dataset-imagenet_78b8c542 --dataset-list /home/runner/MLC/repos/local/cache/extract-file_cdd3b4c7/val.txt
+INFO:main:Namespace(dataset='imagenet', dataset_path='/home/runner/MLC/repos/local/cache/get-preprocessed-dataset-imagenet_78b8c542', dataset_list='/home/runner/MLC/repos/local/cache/extract-file_cdd3b4c7/val.txt', data_format=None, profile='resnet50-tf', scenario='Offline', max_batchsize=32, model='/home/runner/MLC/repos/local/cache/download-file_b02aeeeb/resnet50_v1.pb', output='/home/runner/MLC/repos/local/cache/get-mlperf-inference-results-dir_f392fc6e/test_results/gh_ubuntu-latest_x86-reference-cpu-tf-v2.18.0-default_config/resnet50/offline/performance/run_1', inputs=['input_tensor:0'], outputs=['ArgMax:0'], backend='tensorflow', device=None, model_name='resnet50', threads=4, qps=None, cache=0, cache_dir='/home/runner/MLC/repos/local/cache/get-preprocessed-dataset-imagenet_78b8c542', preprocessed_dir=None, use_preprocessed_dataset=True, accuracy=False, find_peak_performance=False, debug=False, user_conf='/home/runner/MLC/repos/GATEOverflow@mlperf-automations/script/generate-mlperf-inference-user-conf/tmp/af65fafff1c4491c81f28f04ee59c707.conf', audit_conf='audit.config', time=None, count=None, performance_sample_count=None, max_latency=None, samples_per_query=8)
+2025-01-24 22:52:25.179177: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-01-24 22:52:25.182304: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-01-24 22:52:25.190950: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1737759145.204957    6445 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1737759145.209198    6445 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-01-24 22:52:25.224540: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+INFO:matplotlib.font_manager:Failed to extract font properties from /usr/share/fonts/truetype/noto/NotoColorEmoji.ttf: Can not load face (unknown file format; error code 0x2)
+INFO:matplotlib.font_manager:generated new fontManager
+INFO:imagenet:Loading 50000 preprocessed images using 4 threads
+INFO:imagenet:reduced image list, 49500 images not found
+INFO:imagenet:loaded 500 images, cache=0, already_preprocessed=True, took=1.1sec
+WARNING:tensorflow:From /home/runner/MLC/repos/local/cache/get-git-repo_5d36b7b6/inference/vision/classification_and_detection/python/backend_tf.py:55: FastGFile.__init__ (from tensorflow.python.platform.gfile) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.gfile.GFile.
+WARNING:tensorflow:From /opt/hostedtoolcache/Python/3.12.8/x64/lib/python3.12/site-packages/tensorflow/python/tools/strip_unused_lib.py:84: extract_sub_graph (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This API was designed for TensorFlow v1. See https://www.tensorflow.org/guide/migrate for instructions on how to migrate your code to TensorFlow v2.
+WARNING:tensorflow:From /opt/hostedtoolcache/Python/3.12.8/x64/lib/python3.12/site-packages/tensorflow/python/tools/optimize_for_inference_lib.py:138: remove_training_nodes (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This API was designed for TensorFlow v1. See https://www.tensorflow.org/guide/migrate for instructions on how to migrate your code to TensorFlow v2.
+2025-01-24 22:53:23.812215: E external/local_xla/xla/stream_executor/cuda/cuda_driver.cc:152] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1737759203.858762    6445 mlir_graph_optimization_pass.cc:401] MLIR V1 optimization pass is not enabled
+INFO:main:starting TestScenario.Offline
+TestScenario.Offline qps=0.67, mean=15.0122, time=23.794, queries=16, tiles=50.0:15.1283,80.0:22.8634,90.0:23.6494,95.0:23.7170,99.0:23.7352,99.9:23.7393
