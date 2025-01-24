@@ -964,6 +964,36 @@
         "Availability":"available",
         "Division":"open",
         "SystemType":"edge",
+        "SystemName":"gh_windows-latest_x86",
+        "Platform":"gh_windows-latest_x86-reference-cpu-tf_v2.18.0-default_config",
+        "Model":"resnet50",
+        "MlperfModel":"resnet",
+        "Scenario":"Offline",
+        "Result":21.3501,
+        "Accuracy":"acc: 76.000",
+        "number_of_nodes":1,
+        "host_processor_model_name":"undefined",
+        "host_processors_per_node":1,
+        "host_processor_core_count":1,
+        "accelerator_model_name":null,
+        "accelerators_per_node":0,
+        "Location":"open\/MLCommons\/results\/gh_windows-latest_x86-reference-cpu-tf_v2.18.0-default_config\/resnet50\/offline",
+        "framework":"tf v2.18.0",
+        "operating_system":"Windows-2022Server-10.0.20348-SP0",
+        "notes":null,
+        "compliance":1,
+        "errors":0,
+        "version":"v5.0",
+        "inferred":0,
+        "has_power":false,
+        "Units":"Samples\/s",
+        "weight_data_types":"fp32"
+    },
+    "33":{
+        "Organization":"MLCommons",
+        "Availability":"available",
+        "Division":"open",
+        "SystemType":"edge",
         "SystemName":"gh_ubuntu-latest_x86",
         "Platform":"gh_ubuntu-latest_x86-reference-cpu-deepsparse_v1.8.0-default_config",
         "Model":"bert-99",
@@ -989,7 +1019,7 @@
         "Units":"Samples\/s",
         "weight_data_types":"fp32"
     },
-    "33":{
+    "34":{
         "Organization":"MLCommons",
         "Availability":"available",
         "Division":"open",
@@ -1019,7 +1049,7 @@
         "Units":"Samples\/s",
         "weight_data_types":"fp32"
     },
-    "34":{
+    "35":{
         "Organization":"MLCommons",
         "Availability":"available",
         "Division":"open",
@@ -1049,7 +1079,7 @@
         "Units":"Tokens\/s",
         "weight_data_types":"fp32"
     },
-    "35":{
+    "36":{
         "Organization":"MLCommons",
         "Availability":"available",
         "Division":"open",
@@ -1079,7 +1109,7 @@
         "Units":"Samples\/s",
         "weight_data_types":"fp32"
     },
-    "36":{
+    "37":{
         "Organization":"MLCommons",
         "Availability":"available",
         "Division":"closed",
@@ -1109,7 +1139,7 @@
         "Units":"Queries\/s",
         "weight_data_types":"int8"
     },
-    "37":{
+    "38":{
         "Organization":"MLCommons",
         "Availability":"available",
         "Division":"closed",
