@@ -1,0 +1,5860 @@
+Platform Details
+
+------------------------------------------------------------
+1. uname -a
+Linux fv-az1369-136 6.8.0-1020-azure #23-Ubuntu SMP Mon Dec  9 16:58:58 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+------------------------------------------------------------
+2. w
+ 22:43:34 up 3 min,  0 user,  load average: 2.58, 0.88, 0.33
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
+------------------------------------------------------------
+3. Username
+runner
+------------------------------------------------------------
+4. ulimit -a
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) 0
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 63938
+max locked memory           (kbytes, -l) 8192
+max memory size             (kbytes, -m) unlimited
+open files                          (-n) 65536
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) 16384
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 63938
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
+------------------------------------------------------------
+5. sysinfo process ancestry
+systemd-+-ModemManager---3*[{ModemManager}]
+        |-2*[agetty]
+        |-chronyd---chronyd
+        |-containerd---8*[{containerd}]
+        |-cron
+        |-dbus-daemon
+        |-dockerd---9*[{dockerd}]
+        |-haveged
+        |-hv_kvp_daemon
+        |-multipathd---6*[{multipathd}]
+        |-networkd-dispat
+        |-php-fpm8.3---2*[php-fpm8.3]
+        |-polkitd---3*[{polkitd}]
+        |-provisioner-+-Runner.Listener-+-Runner.Worker-+-bash---mlcr---sh---bash---pstree
+        |             |                 |               `-18*[{Runner.Worker}]
+        |             |                 `-16*[{Runner.Listener}]
+        |             |-provjobd---11*[{provjobd}]
+        |             `-14*[{provisioner}]
+        |-python3---python3---4*[{python3}]
+        |-rsyslogd---3*[{rsyslogd}]
+        |-systemd---(sd-pam)
+        |-systemd-journal
+        |-systemd-logind
+        |-systemd-network
+        |-systemd-resolve
+        |-systemd-udevd
+        `-udisksd---5*[{udisksd}]
+------------------------------------------------------------
+6. /proc/cpuinfo
+processor	: 0
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 1
+model name	: AMD EPYC 7763 64-Core Processor
+stepping	: 1
+microcode	: 0xffffffff
+cpu MHz		: 2445.428
+cache size	: 512 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves user_shstk clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+bugs		: sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips	: 4890.85
+TLB size	: 2560 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 1
+model name	: AMD EPYC 7763 64-Core Processor
+stepping	: 1
+microcode	: 0xffffffff
+cpu MHz		: 2614.506
+cache size	: 512 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves user_shstk clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+bugs		: sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips	: 4890.85
+TLB size	: 2560 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 1
+model name	: AMD EPYC 7763 64-Core Processor
+stepping	: 1
+microcode	: 0xffffffff
+cpu MHz		: 3243.273
+cache size	: 512 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves user_shstk clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+bugs		: sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips	: 4890.85
+TLB size	: 2560 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 1
+model name	: AMD EPYC 7763 64-Core Processor
+stepping	: 1
+microcode	: 0xffffffff
+cpu MHz		: 3248.274
+cache size	: 512 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves user_shstk clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+bugs		: sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips	: 4890.85
+TLB size	: 2560 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+------------------------------------------------------------
+7. lscpu
+Architecture:                         x86_64
+CPU op-mode(s):                       32-bit, 64-bit
+Address sizes:                        48 bits physical, 48 bits virtual
+Byte Order:                           Little Endian
+CPU(s):                               4
+On-line CPU(s) list:                  0-3
+Vendor ID:                            AuthenticAMD
+Model name:                           AMD EPYC 7763 64-Core Processor
+CPU family:                           25
+Model:                                1
+Thread(s) per core:                   2
+Core(s) per socket:                   2
+Socket(s):                            1
+Stepping:                             1
+BogoMIPS:                             4890.85
+Flags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves user_shstk clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+Virtualization:                       AMD-V
+Hypervisor vendor:                    Microsoft
+Virtualization type:                  full
+L1d cache:                            64 KiB (2 instances)
+L1i cache:                            64 KiB (2 instances)
+L2 cache:                             1 MiB (2 instances)
+L3 cache:                             32 MiB (1 instance)
+NUMA node(s):                         1
+NUMA node0 CPU(s):                    0-3
+Vulnerability Gather data sampling:   Not affected
+Vulnerability Itlb multihit:          Not affected
+Vulnerability L1tf:                   Not affected
+Vulnerability Mds:                    Not affected
+Vulnerability Meltdown:               Not affected
+Vulnerability Mmio stale data:        Not affected
+Vulnerability Reg file data sampling: Not affected
+Vulnerability Retbleed:               Not affected
+Vulnerability Spec rstack overflow:   Vulnerable: Safe RET, no microcode
+Vulnerability Spec store bypass:      Vulnerable
+Vulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:             Mitigation; Retpolines; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+Vulnerability Srbds:                  Not affected
+Vulnerability Tsx async abort:        Not affected
+------------------------------------------------------------
+8. numactl --hardware
+available: 1 nodes (0)
+node 0 cpus: 0 1 2 3
+node 0 size: 15990 MB
+node 0 free: 8061 MB
+node distances:
+node   0 
+  0:  10 
+------------------------------------------------------------
+9. /proc/meminfo
+MemTotal:       16373796 kB
+MemFree:         8254696 kB
+MemAvailable:   15266948 kB
+Buffers:          168896 kB
+Cached:          6809840 kB
+SwapCached:            0 kB
+Active:          1348560 kB
+Inactive:        5982516 kB
+Active(anon):     430352 kB
+Inactive(anon):        0 kB
+Active(file):     918208 kB
+Inactive(file):  5982516 kB
+Unevictable:       46904 kB
+Mlocked:           43832 kB
+SwapTotal:       4194300 kB
+SwapFree:        4194300 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             73476 kB
+Writeback:             0 kB
+AnonPages:        399296 kB
+Mapped:           390128 kB
+Shmem:             69260 kB
+KReclaimable:     457440 kB
+Slab:             555368 kB
+SReclaimable:     457440 kB
+SUnreclaim:        97928 kB
+KernelStack:        4180 kB
+PageTables:         6532 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    12381196 kB
+Committed_AS:    2223964 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       35532 kB
+VmallocChunk:          0 kB
+Percpu:             2336 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    212992 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+Unaccepted:            0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      120768 kB
+DirectMap2M:     4073472 kB
+DirectMap1G:    14680064 kB
+------------------------------------------------------------
+10. who -r
+         run-level 5  2025-01-24 22:40
+------------------------------------------------------------
+11. Systemd service manager version
+systemd 255 (255.4-1ubuntu8.4)
+------------------------------------------------------------
+12. Services, from systemctl list-unit-files
+UNIT FILE                                    STATE           PRESET
+proc-sys-fs-binfmt_misc.automount            static          -
+-.mount                                      generated       -
+boot-efi.mount                               generated       -
+boot.mount                                   generated       -
+dev-hugepages.mount                          static          -
+dev-mqueue.mount                             static          -
+mnt.mount                                    generated       -
+proc-sys-fs-binfmt_misc.mount                disabled        disabled
+sys-fs-fuse-connections.mount                static          -
+sys-kernel-config.mount                      static          -
+sys-kernel-debug.mount                       static          -
+sys-kernel-tracing.mount                     static          -
+apport-autoreport.path                       enabled         enabled
+systemd-ask-password-console.path            static          -
+systemd-ask-password-plymouth.path           static          -
+systemd-ask-password-wall.path               static          -
+tpm-udev.path                                enabled         enabled
+apache-htcacheclean.service                  disabled        enabled
+apache-htcacheclean@.service                 disabled        enabled
+apache2.service                              disabled        enabled
+apache2@.service                             disabled        enabled
+apparmor.service                             enabled         enabled
+apport-autoreport.service                    static          -
+apport-coredump-hook@.service                static          -
+apport-forward@.service                      static          -
+apt-daily-upgrade.service                    static          -
+apt-daily.service                            static          -
+apt-news.service                             static          -
+autovt@.service                              alias           -
+blk-availability.service                     enabled         enabled
+bolt.service                                 static          -
+chrony-dnssrv@.service                       static          -
+chrony-wait.service                          disabled        enabled
+chrony.service                               enabled         enabled
+chronyd.service                              alias           -
+cloud-config.service                         enabled         enabled
+cloud-final.service                          enabled         enabled
+cloud-init-hotplugd.service                  static          -
+cloud-init-local.service                     enabled         enabled
+cloud-init.service                           enabled         enabled
+cni-dhcp.service                             disabled        enabled
+console-getty.service                        disabled        disabled
+console-setup.service                        enabled         enabled
+container-getty@.service                     static          -
+containerd.service                           enabled         enabled
+cron.service                                 enabled         enabled
+cryptdisks-early.service                     masked          enabled
+cryptdisks.service                           masked          enabled
+dbus-org.freedesktop.hostname1.service       alias           -
+dbus-org.freedesktop.locale1.service         alias           -
+dbus-org.freedesktop.login1.service          alias           -
+dbus-org.freedesktop.ModemManager1.service   alias           -
+dbus-org.freedesktop.resolve1.service        alias           -
+dbus-org.freedesktop.timedate1.service       alias           -
+dbus.service                                 static          -
+debug-shell.service                          disabled        disabled
+dm-event.service                             static          -
+dmesg.service                                enabled         enabled
+docker.service                               enabled         enabled
+dpkg-db-backup.service                       static          -
+e2scrub@.service                             static          -
+e2scrub_all.service                          static          -
+e2scrub_fail@.service                        static          -
+e2scrub_reap.service                         enabled         enabled
+emergency.service                            static          -
+ephemeral-disk-warning.service               enabled         enabled
+esm-cache.service                            static          -
+finalrd.service                              enabled         enabled
+friendly-recovery.service                    static          -
+fstrim.service                               static          -
+fwupd-offline-update.service                 static          -
+fwupd-refresh.service                        static          -
+fwupd.service                                static          -
+getty-static.service                         static          -
+getty@.service                               enabled         enabled
+grub-common.service                          enabled         enabled
+grub-initrd-fallback.service                 enabled         enabled
+haveged.service                              enabled         enabled
+hv-fcopy-daemon.service                      enabled         enabled
+hv-kvp-daemon.service                        enabled         enabled
+hv-vss-daemon.service                        enabled         enabled
+hwclock.service                              masked          enabled
+initrd-cleanup.service                       static          -
+initrd-parse-etc.service                     static          -
+initrd-switch-root.service                   static          -
+initrd-udevadm-cleanup-db.service            static          -
+intel-sgx-load-module.service                disabled        enabled
+iscsi.service                                alias           -
+iscsid.service                               disabled        enabled
+keyboard-setup.service                       enabled         enabled
+kmod-static-nodes.service                    static          -
+kmod.service                                 alias           -
+ldconfig.service                             static          -
+logrotate.service                            static          -
+lvm2-lvmpolld.service                        static          -
+lvm2-monitor.service                         enabled         enabled
+lxd-agent.service                            static          -
+lxd-installer@.service                       static          -
+man-db.service                               static          -
+mdadm-grow-continue@.service                 static          -
+mdadm-last-resort@.service                   static          -
+mdcheck_continue.service                     static          -
+mdcheck_start.service                        static          -
+mdmon@.service                               static          -
+mdmonitor-oneshot.service                    static          -
+mdmonitor.service                            static          -
+ModemManager.service                         enabled         enabled
+modprobe@.service                            static          -
+motd-news.service                            static          -
+multipath-tools-boot.service                 masked          enabled
+multipath-tools.service                      alias           -
+multipathd.service                           enabled         enabled
+mysql.service                                disabled        enabled
+netplan-ovs-cleanup.service                  enabled-runtime enabled
+networkd-dispatcher.service                  enabled         enabled
+nftables.service                             disabled        enabled
+nginx.service                                disabled        enabled
+nvmefc-boot-connections.service              enabled         enabled
+nvmf-autoconnect.service                     enabled         enabled
+nvmf-connect-nbft.service                    static          -
+nvmf-connect@.service                        static          -
+open-iscsi.service                           enabled         enabled
+open-vm-tools.service                        enabled         enabled
+packagekit-offline-update.service            static          -
+packagekit.service                           static          -
+pam_namespace.service                        static          -
+pg_basebackup@.service                       static          -
+pg_compresswal@.service                      static          -
+pg_dump@.service                             static          -
+pg_receivewal@.service                       disabled        enabled
+php8.3-fpm.service                           enabled         enabled
+phpsessionclean.service                      static          -
+plymouth-halt.service                        static          -
+plymouth-kexec.service                       static          -
+plymouth-log.service                         alias           -
+plymouth-poweroff.service                    static          -
+plymouth-quit-wait.service                   static          -
+plymouth-quit.service                        static          -
+plymouth-read-write.service                  static          -
+plymouth-reboot.service                      static          -
+plymouth-start.service                       static          -
+plymouth-switch-root-initramfs.service       static          -
+plymouth-switch-root.service                 static          -
+plymouth.service                             alias           -
+podman-auto-update.service                   enabled         enabled
+podman-clean-transient.service               enabled         enabled
+podman-kube@.service                         disabled        enabled
+podman-restart.service                       enabled         enabled
+podman.service                               enabled         enabled
+polkit.service                               static          -
+pollinate.service                            enabled         enabled
+postgresql.service                           disabled        enabled
+postgresql@.service                          indirect        enabled
+procps.service                               alias           -
+quotaon.service                              static          -
+rc-local.service                             static          -
+rescue.service                               static          -
+rsync.service                                disabled        enabled
+rsyslog.service                              enabled         enabled
+runner-provisioner.service                   enabled         enabled
+screen-cleanup.service                       masked          enabled
+secureboot-db.service                        enabled         enabled
+serial-getty@.service                        indirect        enabled
+session-manager-plugin.service               disabled        enabled
+setvtrgb.service                             enabled         enabled
+snapd.apparmor.service                       enabled         enabled
+snapd.autoimport.service                     enabled         enabled
+snapd.core-fixup.service                     enabled         enabled
+snapd.failure.service                        static          -
+snapd.recovery-chooser-trigger.service       enabled         enabled
+snapd.seeded.service                         enabled         enabled
+snapd.service                                enabled         enabled
+snapd.snap-repair.service                    static          -
+snapd.system-shutdown.service                enabled         enabled
+sphinxsearch.service                         generated       -
+ssh.service                                  disabled        enabled
+ssl-cert.service                             enabled         enabled
+sudo.service                                 masked          enabled
+syslog.service                               alias           -
+sysstat-collect.service                      static          -
+sysstat-summary.service                      static          -
+sysstat.service                              enabled         enabled
+system-update-cleanup.service                static          -
+systemd-ask-password-console.service         static          -
+systemd-ask-password-plymouth.service        static          -
+systemd-ask-password-wall.service            static          -
+systemd-backlight@.service                   static          -
+systemd-battery-check.service                static          -
+systemd-binfmt.service                       static          -
+systemd-boot-check-no-failures.service       disabled        disabled
+systemd-bsod.service                         static          -
+systemd-confext.service                      disabled        enabled
+systemd-coredump@.service                    static          -
+systemd-exit.service                         static          -
+systemd-firstboot.service                    static          -
+systemd-fsck-root.service                    enabled-runtime enabled
+systemd-fsck@.service                        static          -
+systemd-fsckd.service                        static          -
+systemd-growfs-root.service                  static          -
+systemd-growfs@.service                      static          -
+systemd-halt.service                         static          -
+systemd-hibernate-resume.service             static          -
+systemd-hibernate.service                    static          -
+systemd-hostnamed.service                    static          -
+systemd-hwdb-update.service                  static          -
+systemd-hybrid-sleep.service                 static          -
+systemd-initctl.service                      static          -
+systemd-journal-catalog-update.service       static          -
+systemd-journal-flush.service                static          -
+systemd-journald.service                     static          -
+systemd-journald@.service                    static          -
+systemd-kexec.service                        static          -
+systemd-localed.service                      static          -
+systemd-logind.service                       static          -
+systemd-machine-id-commit.service            static          -
+systemd-modules-load.service                 static          -
+systemd-network-generator.service            disabled        enabled
+systemd-networkd-wait-online.service         enabled         enabled
+systemd-networkd-wait-online@.service        disabled        enabled
+systemd-networkd.service                     enabled         enabled
+systemd-pcrextend@.service                   static          -
+systemd-pcrfs-root.service                   static          -
+systemd-pcrfs@.service                       static          -
+systemd-pcrlock-file-system.service          disabled        enabled
+systemd-pcrlock-firmware-code.service        disabled        enabled
+systemd-pcrlock-firmware-config.service      disabled        enabled
+systemd-pcrlock-machine-id.service           disabled        enabled
+systemd-pcrlock-make-policy.service          disabled        enabled
+systemd-pcrlock-secureboot-authority.service disabled        enabled
+systemd-pcrlock-secureboot-policy.service    disabled        enabled
+systemd-pcrmachine.service                   static          -
+systemd-pcrphase-initrd.service              static          -
+systemd-pcrphase-sysinit.service             static          -
+systemd-pcrphase.service                     static          -
+systemd-poweroff.service                     static          -
+systemd-pstore.service                       enabled         enabled
+systemd-quotacheck.service                   static          -
+systemd-random-seed.service                  static          -
+systemd-reboot.service                       static          -
+systemd-remount-fs.service                   enabled-runtime enabled
+systemd-repart.service                       static          -
+systemd-resolved.service                     enabled         enabled
+systemd-rfkill.service                       static          -
+systemd-soft-reboot.service                  static          -
+systemd-storagetm.service                    static          -
+systemd-suspend-then-hibernate.service       static          -
+systemd-suspend.service                      static          -
+systemd-sysctl.service                       static          -
+systemd-sysext.service                       disabled        enabled
+systemd-sysext@.service                      static          -
+systemd-sysupdate-reboot.service             indirect        enabled
+systemd-sysupdate.service                    indirect        enabled
+systemd-sysusers.service                     static          -
+systemd-time-wait-sync.service               disabled        disabled
+systemd-timedated.service                    static          -
+systemd-tmpfiles-clean.service               static          -
+systemd-tmpfiles-setup-dev-early.service     static          -
+systemd-tmpfiles-setup-dev.service           static          -
+systemd-tmpfiles-setup.service               static          -
+systemd-tpm2-setup-early.service             static          -
+systemd-tpm2-setup.service                   static          -
+systemd-udev-settle.service                  static          -
+systemd-udev-trigger.service                 static          -
+systemd-udevd.service                        static          -
+systemd-update-done.service                  static          -
+systemd-update-utmp-runlevel.service         static          -
+systemd-update-utmp.service                  static          -
+systemd-user-sessions.service                static          -
+systemd-volatile-root.service                static          -
+tpm-udev.service                             static          -
+ua-reboot-cmds.service                       enabled         enabled
+ua-timer.service                             static          -
+ubuntu-advantage.service                     enabled         enabled
+udev.service                                 alias           -
+udisks2.service                              enabled         enabled
+ufw.service                                  enabled         enabled
+update-notifier-download.service             static          -
+update-notifier-motd.service                 static          -
+usb_modeswitch@.service                      static          -
+user-runtime-dir@.service                    static          -
+user@.service                                static          -
+uuidd.service                                indirect        enabled
+vgauth.service                               enabled         enabled
+vmtoolsd.service                             alias           -
+walinuxagent-network-setup.service           enabled         enabled
+walinuxagent.service                         enabled         enabled
+x11-common.service                           masked          enabled
+xfs_scrub@.service                           static          -
+xfs_scrub_all.service                        static          -
+xfs_scrub_fail@.service                      static          -
+azure-vmextensions.slice                     static          -
+azure.slice                                  static          -
+machine.slice                                static          -
+system-systemd\x2dcryptsetup.slice           static          -
+system-systemd\x2dveritysetup.slice          static          -
+user.slice                                   static          -
+apport-forward.socket                        enabled         enabled
+cloud-init-hotplugd.socket                   enabled         enabled
+cni-dhcp.socket                              disabled        enabled
+dbus.socket                                  static          -
+dm-event.socket                              enabled         enabled
+docker.socket                                enabled         enabled
+iscsid.socket                                enabled         enabled
+lvm2-lvmpolld.socket                         enabled         enabled
+lxd-installer.socket                         enabled         enabled
+multipathd.socket                            enabled         enabled
+podman.socket                                enabled         enabled
+snapd.socket                                 enabled         enabled
+ssh.socket                                   enabled         enabled
+syslog.socket                                static          -
+systemd-coredump.socket                      static          -
+systemd-fsckd.socket                         static          -
+systemd-initctl.socket                       static          -
+systemd-journald-audit.socket                disabled        enabled
+systemd-journald-dev-log.socket              static          -
+systemd-journald-varlink@.socket             static          -
+systemd-journald.socket                      static          -
+systemd-journald@.socket                     static          -
+systemd-networkd.socket                      enabled         enabled
+systemd-pcrextend.socket                     disabled        enabled
+systemd-rfkill.socket                        static          -
+systemd-sysext.socket                        disabled        enabled
+systemd-udevd-control.socket                 static          -
+systemd-udevd-kernel.socket                  static          -
+uuidd.socket                                 enabled         enabled
+basic.target                                 static          -
+blockdev@.target                             static          -
+bluetooth.target                             static          -
+boot-complete.target                         static          -
+cloud-config.target                          static          -
+cloud-init.target                            enabled-runtime enabled
+cryptsetup-pre.target                        static          -
+cryptsetup.target                            static          -
+ctrl-alt-del.target                          alias           -
+default.target                               alias           -
+emergency.target                             static          -
+exit.target                                  disabled        disabled
+factory-reset.target                         static          -
+final.target                                 static          -
+first-boot-complete.target                   static          -
+friendly-recovery.target                     static          -
+getty-pre.target                             static          -
+getty.target                                 static          -
+graphical.target                             static          -
+halt.target                                  disabled        disabled
+hibernate.target                             static          -
+hybrid-sleep.target                          static          -
+initrd-fs.target                             static          -
+initrd-root-device.target                    static          -
+initrd-root-fs.target                        static          -
+initrd-switch-root.target                    static          -
+initrd-usr-fs.target                         static          -
+initrd.target                                static          -
+integritysetup-pre.target                    static          -
+integritysetup.target                        static          -
+kexec.target                                 disabled        disabled
+local-fs-pre.target                          static          -
+local-fs.target                              static          -
+multi-user.target                            static          -
+network-online.target                        static          -
+network-pre.target                           static          -
+network.target                               static          -
+nss-lookup.target                            static          -
+nss-user-lookup.target                       static          -
+nvmf-connect.target                          static          -
+paths.target                                 static          -
+poweroff.target                              disabled        disabled
+printer.target                               static          -
+reboot.target                                disabled        enabled
+remote-cryptsetup.target                     disabled        enabled
+remote-fs-pre.target                         static          -
+remote-fs.target                             enabled         enabled
+remote-veritysetup.target                    disabled        enabled
+rescue-ssh.target                            static          -
+rescue.target                                static          -
+rpcbind.target                               static          -
+runlevel0.target                             alias           -
+runlevel1.target                             alias           -
+runlevel2.target                             alias           -
+runlevel3.target                             alias           -
+runlevel4.target                             alias           -
+runlevel5.target                             alias           -
+runlevel6.target                             alias           -
+shutdown.target                              static          -
+sigpwr.target                                static          -
+sleep.target                                 static          -
+slices.target                                static          -
+smartcard.target                             static          -
+snapd.mounts-pre.target                      static          -
+snapd.mounts.target                          static          -
+sockets.target                               static          -
+soft-reboot.target                           static          -
+sound.target                                 static          -
+storage-target-mode.target                   static          -
+suspend-then-hibernate.target                static          -
+suspend.target                               static          -
+swap.target                                  static          -
+sysinit.target                               static          -
+system-update-pre.target                     static          -
+system-update.target                         static          -
+time-set.target                              static          -
+time-sync.target                             static          -
+timers.target                                static          -
+umount.target                                static          -
+usb-gadget.target                            static          -
+veritysetup-pre.target                       static          -
+veritysetup.target                           static          -
+apport-autoreport.timer                      enabled         enabled
+apt-daily-upgrade.timer                      disabled        enabled
+apt-daily.timer                              disabled        enabled
+chrony-dnssrv@.timer                         disabled        enabled
+dpkg-db-backup.timer                         enabled         enabled
+e2scrub_all.timer                            enabled         enabled
+fstrim.timer                                 enabled         enabled
+fwupd-refresh.timer                          enabled         enabled
+logrotate.timer                              enabled         enabled
+man-db.timer                                 enabled         enabled
+mdadm-last-resort@.timer                     static          -
+mdcheck_continue.timer                       enabled         enabled
+mdcheck_start.timer                          enabled         enabled
+mdmonitor-oneshot.timer                      enabled         enabled
+motd-news.timer                              enabled         enabled
+pg_basebackup@.timer                         disabled        enabled
+pg_compresswal@.timer                        disabled        enabled
+pg_dump@.timer                               disabled        enabled
+phpsessionclean.timer                        enabled         enabled
+podman-auto-update.timer                     enabled         enabled
+snapd.snap-repair.timer                      enabled         enabled
+sysstat-collect.timer                        enabled         enabled
+sysstat-summary.timer                        enabled         enabled
+systemd-sysupdate-reboot.timer               disabled        enabled
+systemd-sysupdate.timer                      disabled        enabled
+systemd-tmpfiles-clean.timer                 static          -
+ua-timer.timer                               enabled         enabled
+update-notifier-download.timer               enabled         enabled
+update-notifier-motd.timer                   enabled         enabled
+xfs_scrub_all.timer                          disabled        enabled
+
+437 unit files listed.
+------------------------------------------------------------
+13. Linux kernel boot-time arguments, from /proc/cmdline
+BOOT_IMAGE=/vmlinuz-6.8.0-1020-azure root=PARTUUID=8be7931c-8315-4344-95d4-bcbd379998fb ro console=tty1 console=ttyS0 earlyprintk=ttyS0 nvme_core.io_timeout=240 panic=-1
+------------------------------------------------------------
+14. cpupower frequency-info
+analyzing CPU 3:
+  no or unknown cpufreq driver is active on this CPU
+  CPUs which run at the same hardware frequency: Not Available
+  CPUs which need to have their frequency coordinated by software: Not Available
+  maximum transition latency:  Cannot determine or is not supported.
+Not Available
+  available cpufreq governors: Not Available
+  Unable to determine current policy
+  current CPU frequency: Unable to call hardware
+  current CPU frequency:  Unable to call to kernel
+  boost state support:
+    Supported: no
+    Active: no
+------------------------------------------------------------
+15. sysctl
+abi.vsyscall32 = 1
+debug.exception-trace = 1
+debug.kprobes-optimization = 1
+dev.cdrom.autoclose = 1
+dev.cdrom.autoeject = 0
+dev.cdrom.check_media = 0
+dev.cdrom.debug = 0
+dev.cdrom.info = CD-ROM information, Id: cdrom.c 3.20 2003/12/17
+dev.cdrom.info = 
+dev.cdrom.info = drive name:	
+dev.cdrom.info = drive speed:	
+dev.cdrom.info = drive # of slots:
+dev.cdrom.info = Can close tray:	
+dev.cdrom.info = Can open tray:	
+dev.cdrom.info = Can lock tray:	
+dev.cdrom.info = Can change speed:
+dev.cdrom.info = Can select disk:
+dev.cdrom.info = Can read multisession:
+dev.cdrom.info = Can read MCN:	
+dev.cdrom.info = Reports media changed:
+dev.cdrom.info = Can play audio:	
+dev.cdrom.info = Can write CD-R:	
+dev.cdrom.info = Can write CD-RW:
+dev.cdrom.info = Can read DVD:	
+dev.cdrom.info = Can write DVD-R:
+dev.cdrom.info = Can write DVD-RAM:
+dev.cdrom.info = Can read MRW:	
+dev.cdrom.info = Can write MRW:	
+dev.cdrom.info = Can write RAM:	
+dev.cdrom.info = 
+dev.cdrom.info = 
+dev.cdrom.lock = 0
+dev.hpet.max-user-freq = 64
+dev.raid.speed_limit_max = 200000
+dev.raid.speed_limit_min = 1000
+dev.scsi.logging_level = 0
+dev.tty.ldisc_autoload = 1
+dev.tty.legacy_tiocsti = 0
+fs.aio-max-nr = 65536
+fs.aio-nr = 0
+fs.binfmt_misc.python3/12 = enabled
+fs.binfmt_misc.python3/12 = interpreter /usr/bin/python3.12
+fs.binfmt_misc.python3/12 = flags: 
+fs.binfmt_misc.python3/12 = offset 0
+fs.binfmt_misc.python3/12 = magic cb0d0d0a
+fs.binfmt_misc.llvm-18-runtime/binfmt = enabled
+fs.binfmt_misc.llvm-18-runtime/binfmt = interpreter /usr/bin/lli-18
+fs.binfmt_misc.llvm-18-runtime/binfmt = flags: 
+fs.binfmt_misc.llvm-18-runtime/binfmt = offset 0
+fs.binfmt_misc.llvm-18-runtime/binfmt = magic 4243
+fs.binfmt_misc.llvm-17-runtime/binfmt = enabled
+fs.binfmt_misc.llvm-17-runtime/binfmt = interpreter /usr/bin/lli-17
+fs.binfmt_misc.llvm-17-runtime/binfmt = flags: 
+fs.binfmt_misc.llvm-17-runtime/binfmt = offset 0
+fs.binfmt_misc.llvm-17-runtime/binfmt = magic 4243
+fs.binfmt_misc.llvm-16-runtime/binfmt = enabled
+fs.binfmt_misc.llvm-16-runtime/binfmt = interpreter /usr/bin/lli-16
+fs.binfmt_misc.llvm-16-runtime/binfmt = flags: 
+fs.binfmt_misc.llvm-16-runtime/binfmt = offset 0
+fs.binfmt_misc.llvm-16-runtime/binfmt = magic 4243
+fs.binfmt_misc.status = enabled
+fs.dentry-state = 264047	256329	45	0	62565	0
+fs.dir-notify-enable = 1
+fs.epoll.max_user_watches = 3643703
+fs.fanotify.max_queued_events = 16384
+fs.fanotify.max_user_groups = 128
+fs.fanotify.max_user_marks = 132601
+fs.file-max = 9223372036854775807
+fs.file-nr = 1984	0	9223372036854775807
+fs.inode-nr = 201212	568
+fs.inode-state = 201212	568	0	0	0	0	0
+fs.inotify.max_queued_events = 16384
+fs.inotify.max_user_instances = 1280
+fs.inotify.max_user_watches = 655360
+fs.lease-break-time = 45
+fs.leases-enable = 1
+fs.mount-max = 100000
+fs.mqueue.msg_default = 10
+fs.mqueue.msg_max = 10
+fs.mqueue.msgsize_default = 8192
+fs.mqueue.msgsize_max = 8192
+fs.mqueue.queues_max = 256
+fs.nr_open = 1048576
+fs.overflowgid = 65534
+fs.overflowuid = 65534
+fs.pipe-max-size = 1048576
+fs.pipe-user-pages-hard = 0
+fs.pipe-user-pages-soft = 16384
+fs.protected_fifos = 1
+fs.protected_hardlinks = 1
+fs.protected_regular = 2
+fs.protected_symlinks = 1
+fs.quota.allocated_dquots = 0
+fs.quota.cache_hits = 0
+fs.quota.drops = 0
+fs.quota.free_dquots = 0
+fs.quota.lookups = 0
+fs.quota.reads = 0
+fs.quota.syncs = 12
+fs.quota.writes = 0
+fs.suid_dumpable = 2
+fs.verity.require_signatures = 0
+kernel.acct = 4	2	30
+kernel.acpi_video_flags = 0
+kernel.apparmor_display_secid_mode = 0
+kernel.apparmor_restrict_unprivileged_io_uring = 0
+kernel.apparmor_restrict_unprivileged_unconfined = 0
+kernel.apparmor_restrict_unprivileged_userns = 1
+kernel.apparmor_restrict_unprivileged_userns_complain = 0
+kernel.apparmor_restrict_unprivileged_userns_force = 0
+kernel.arch = x86_64
+kernel.auto_msgmni = 0
+kernel.bootloader_type = 114
+kernel.bootloader_version = 2
+kernel.bpf_stats_enabled = 0
+kernel.cad_pid = 1
+kernel.cap_last_cap = 40
+kernel.core_pattern = |/usr/lib/systemd/systemd-coredump %P %u %g %s %t 9223372036854775808 %h
+kernel.core_pipe_limit = 16
+kernel.core_uses_pid = 0
+kernel.ctrl-alt-del = 0
+kernel.dmesg_restrict = 1
+kernel.domainname = (none)
+kernel.firmware_config.force_sysfs_fallback = 0
+kernel.firmware_config.ignore_sysfs_fallback = 0
+kernel.ftrace_dump_on_oops = 0
+kernel.ftrace_enabled = 1
+kernel.hardlockup_all_cpu_backtrace = 0
+kernel.hardlockup_panic = 0
+kernel.hostname = fv-az1369-136
+kernel.hotplug = 
+kernel.hung_task_all_cpu_backtrace = 0
+kernel.hung_task_check_count = 4194304
+kernel.hung_task_check_interval_secs = 0
+kernel.hung_task_panic = 0
+kernel.hung_task_timeout_secs = 120
+kernel.hung_task_warnings = 10
+kernel.hyperv_record_panic_msg = 1
+kernel.io_delay_type = 1
+kernel.io_uring_disabled = 0
+kernel.io_uring_group = -1
+kernel.kexec_load_disabled = 0
+kernel.kexec_load_limit_panic = -1
+kernel.kexec_load_limit_reboot = -1
+kernel.keys.gc_delay = 300
+kernel.keys.maxbytes = 20000
+kernel.keys.maxkeys = 200
+kernel.keys.persistent_keyring_expiry = 259200
+kernel.keys.root_maxbytes = 25000000
+kernel.keys.root_maxkeys = 1000000
+kernel.kptr_restrict = 1
+kernel.latencytop = 0
+kernel.max_lock_depth = 1024
+kernel.max_rcu_stall_to_panic = 0
+kernel.modprobe = /sbin/modprobe
+kernel.modules_disabled = 0
+kernel.msg_next_id = -1
+kernel.msgmax = 8192
+kernel.msgmnb = 16384
+kernel.msgmni = 32000
+kernel.ngroups_max = 65536
+kernel.nmi_watchdog = 0
+kernel.ns_last_pid = 6856
+kernel.numa_balancing = 0
+kernel.numa_balancing_promote_rate_limit_MBps = 65536
+kernel.oops_all_cpu_backtrace = 0
+kernel.oops_limit = 10000
+kernel.osrelease = 6.8.0-1020-azure
+kernel.ostype = Linux
+kernel.overflowgid = 65534
+kernel.overflowuid = 65534
+kernel.panic = -1
+kernel.panic_on_io_nmi = 0
+kernel.panic_on_oops = 0
+kernel.panic_on_rcu_stall = 0
+kernel.panic_on_unrecovered_nmi = 0
+kernel.panic_on_warn = 0
+kernel.panic_print = 0
+kernel.perf_cpu_time_max_percent = 25
+kernel.perf_event_max_contexts_per_stack = 8
+kernel.perf_event_max_sample_rate = 100000
+kernel.perf_event_max_stack = 127
+kernel.perf_event_mlock_kb = 516
+kernel.perf_event_paranoid = 4
+kernel.pid_max = 4194304
+kernel.poweroff_cmd = /sbin/poweroff
+kernel.print-fatal-signals = 0
+kernel.printk = 4	4	1	7
+kernel.printk_delay = 0
+kernel.printk_devkmsg = on
+kernel.printk_ratelimit = 5
+kernel.printk_ratelimit_burst = 10
+kernel.pty.max = 4096
+kernel.pty.nr = 0
+kernel.pty.reserve = 1024
+kernel.random.boot_id = 87dd0230-c140-4455-a932-ffef4952ff25
+kernel.random.entropy_avail = 256
+kernel.random.poolsize = 256
+kernel.random.urandom_min_reseed_secs = 60
+kernel.random.uuid = f37596bd-aee5-4e14-8fb3-6228d543d36b
+kernel.random.write_wakeup_threshold = 256
+kernel.randomize_va_space = 2
+kernel.real-root-dev = 0
+kernel.sched_autogroup_enabled = 1
+kernel.sched_cfs_bandwidth_slice_us = 5000
+kernel.sched_deadline_period_max_us = 4194304
+kernel.sched_deadline_period_min_us = 100
+kernel.sched_rr_timeslice_ms = 100
+kernel.sched_rt_period_us = 1000000
+kernel.sched_rt_runtime_us = 950000
+kernel.sched_schedstats = 0
+kernel.sched_util_clamp_max = 1024
+kernel.sched_util_clamp_min = 1024
+kernel.sched_util_clamp_min_rt_default = 1024
+kernel.seccomp.actions_avail = kill_process kill_thread trap errno user_notif trace log allow
+kernel.seccomp.actions_logged = kill_process kill_thread trap errno user_notif trace log
+kernel.sem = 32000	1024000000	500	32000
+kernel.sem_next_id = -1
+kernel.shm_next_id = -1
+kernel.shm_rmid_forced = 0
+kernel.shmall = 18446744073692774399
+kernel.shmmax = 18446744073692774399
+kernel.shmmni = 4096
+kernel.soft_watchdog = 1
+kernel.softlockup_all_cpu_backtrace = 0
+kernel.softlockup_panic = 0
+kernel.split_lock_mitigate = 1
+kernel.stack_tracer_enabled = 0
+kernel.sysctl_writes_strict = 1
+kernel.sysrq = 176
+kernel.tainted = 0
+kernel.task_delayacct = 0
+kernel.threads-max = 127876
+kernel.timer_migration = 1
+kernel.traceoff_on_warning = 0
+kernel.tracepoint_printk = 0
+kernel.unknown_nmi_panic = 0
+kernel.unprivileged_bpf_disabled = 2
+kernel.unprivileged_userns_apparmor_policy = 1
+kernel.unprivileged_userns_clone = 1
+kernel.user_events_max = 32768
+kernel.usermodehelper.bset = 4294967295	511
+kernel.usermodehelper.inheritable = 4294967295	511
+kernel.version = #23-Ubuntu SMP Mon Dec  9 16:58:58 UTC 2024
+kernel.warn_limit = 0
+kernel.watchdog = 1
+kernel.watchdog_cpumask = 0-3
+kernel.watchdog_thresh = 10
+kernel.yama.ptrace_scope = 1
+net.bridge.bridge-nf-call-arptables = 1
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+net.bridge.bridge-nf-filter-pppoe-tagged = 0
+net.bridge.bridge-nf-filter-vlan-tagged = 0
+net.bridge.bridge-nf-pass-vlan-input-dev = 0
+net.core.bpf_jit_enable = 1
+net.core.bpf_jit_harden = 0
+net.core.bpf_jit_kallsyms = 1
+net.core.bpf_jit_limit = 528482304
+net.core.busy_poll = 0
+net.core.busy_read = 0
+net.core.default_qdisc = fq_codel
+net.core.dev_weight = 64
+net.core.dev_weight_rx_bias = 1
+net.core.dev_weight_tx_bias = 1
+net.core.devconf_inherit_init_net = 0
+net.core.fb_tunnels_only_for_init_net = 0
+net.core.flow_limit_cpu_bitmap = 0
+net.core.flow_limit_table_len = 4096
+net.core.gro_normal_batch = 8
+net.core.high_order_alloc_disable = 0
+net.core.max_skb_frags = 17
+net.core.mem_pcpu_rsv = 256
+net.core.message_burst = 10
+net.core.message_cost = 5
+net.core.netdev_budget = 300
+net.core.netdev_budget_usecs = 2000
+net.core.netdev_max_backlog = 1000
+net.core.netdev_rss_key = 00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+net.core.netdev_tstamp_prequeue = 1
+net.core.netdev_unregister_timeout_secs = 10
+net.core.optmem_max = 131072
+net.core.rmem_default = 1048576
+net.core.rmem_max = 1048576
+net.core.rps_default_mask = 0
+net.core.rps_sock_flow_entries = 0
+net.core.skb_defer_max = 64
+net.core.somaxconn = 4096
+net.core.tstamp_allow_data = 1
+net.core.txrehash = 1
+net.core.warnings = 0
+net.core.wmem_default = 212992
+net.core.wmem_max = 212992
+net.core.xfrm_acq_expires = 30
+net.core.xfrm_aevent_etime = 10
+net.core.xfrm_aevent_rseqth = 2
+net.core.xfrm_larval_drop = 1
+net.fan.vxlan = 4
+net.ipv4.cipso_cache_bucket_size = 10
+net.ipv4.cipso_cache_enable = 1
+net.ipv4.cipso_rbm_optfmt = 0
+net.ipv4.cipso_rbm_strictvalid = 1
+net.ipv4.conf.all.accept_local = 0
+net.ipv4.conf.all.accept_redirects = 0
+net.ipv4.conf.all.accept_source_route = 0
+net.ipv4.conf.all.arp_accept = 0
+net.ipv4.conf.all.arp_announce = 0
+net.ipv4.conf.all.arp_evict_nocarrier = 1
+net.ipv4.conf.all.arp_filter = 0
+net.ipv4.conf.all.arp_ignore = 0
+net.ipv4.conf.all.arp_notify = 0
+net.ipv4.conf.all.bc_forwarding = 0
+net.ipv4.conf.all.bootp_relay = 0
+net.ipv4.conf.all.disable_policy = 0
+net.ipv4.conf.all.disable_xfrm = 0
+net.ipv4.conf.all.drop_gratuitous_arp = 0
+net.ipv4.conf.all.drop_unicast_in_l2_multicast = 0
+net.ipv4.conf.all.force_igmp_version = 0
+net.ipv4.conf.all.forwarding = 1
+net.ipv4.conf.all.igmpv2_unsolicited_report_interval = 10000
+net.ipv4.conf.all.igmpv3_unsolicited_report_interval = 1000
+net.ipv4.conf.all.ignore_routes_with_linkdown = 0
+net.ipv4.conf.all.log_martians = 0
+net.ipv4.conf.all.mc_forwarding = 0
+net.ipv4.conf.all.medium_id = 0
+net.ipv4.conf.all.promote_secondaries = 0
+net.ipv4.conf.all.proxy_arp = 0
+net.ipv4.conf.all.proxy_arp_pvlan = 0
+net.ipv4.conf.all.route_localnet = 0
+net.ipv4.conf.all.rp_filter = 2
+net.ipv4.conf.all.secure_redirects = 1
+net.ipv4.conf.all.send_redirects = 1
+net.ipv4.conf.all.shared_media = 1
+net.ipv4.conf.all.src_valid_mark = 0
+net.ipv4.conf.all.tag = 0
+net.ipv4.conf.default.accept_local = 0
+net.ipv4.conf.default.accept_redirects = 1
+net.ipv4.conf.default.accept_source_route = 1
+net.ipv4.conf.default.arp_accept = 0
+net.ipv4.conf.default.arp_announce = 0
+net.ipv4.conf.default.arp_evict_nocarrier = 1
+net.ipv4.conf.default.arp_filter = 0
+net.ipv4.conf.default.arp_ignore = 0
+net.ipv4.conf.default.arp_notify = 0
+net.ipv4.conf.default.bc_forwarding = 0
+net.ipv4.conf.default.bootp_relay = 0
+net.ipv4.conf.default.disable_policy = 0
+net.ipv4.conf.default.disable_xfrm = 0
+net.ipv4.conf.default.drop_gratuitous_arp = 0
+net.ipv4.conf.default.drop_unicast_in_l2_multicast = 0
+net.ipv4.conf.default.force_igmp_version = 0
+net.ipv4.conf.default.forwarding = 1
+net.ipv4.conf.default.igmpv2_unsolicited_report_interval = 10000
+net.ipv4.conf.default.igmpv3_unsolicited_report_interval = 1000
+net.ipv4.conf.default.ignore_routes_with_linkdown = 0
+net.ipv4.conf.default.log_martians = 0
+net.ipv4.conf.default.mc_forwarding = 0
+net.ipv4.conf.default.medium_id = 0
+net.ipv4.conf.default.promote_secondaries = 0
+net.ipv4.conf.default.proxy_arp = 0
+net.ipv4.conf.default.proxy_arp_pvlan = 0
+net.ipv4.conf.default.route_localnet = 0
+net.ipv4.conf.default.rp_filter = 2
+net.ipv4.conf.default.secure_redirects = 1
+net.ipv4.conf.default.send_redirects = 1
+net.ipv4.conf.default.shared_media = 1
+net.ipv4.conf.default.src_valid_mark = 0
+net.ipv4.conf.default.tag = 0
+net.ipv4.conf.docker0.accept_local = 0
+net.ipv4.conf.docker0.accept_redirects = 1
+net.ipv4.conf.docker0.accept_source_route = 1
+net.ipv4.conf.docker0.arp_accept = 0
+net.ipv4.conf.docker0.arp_announce = 0
+net.ipv4.conf.docker0.arp_evict_nocarrier = 1
+net.ipv4.conf.docker0.arp_filter = 0
+net.ipv4.conf.docker0.arp_ignore = 0
+net.ipv4.conf.docker0.arp_notify = 0
+net.ipv4.conf.docker0.bc_forwarding = 0
+net.ipv4.conf.docker0.bootp_relay = 0
+net.ipv4.conf.docker0.disable_policy = 0
+net.ipv4.conf.docker0.disable_xfrm = 0
+net.ipv4.conf.docker0.drop_gratuitous_arp = 0
+net.ipv4.conf.docker0.drop_unicast_in_l2_multicast = 0
+net.ipv4.conf.docker0.force_igmp_version = 0
+net.ipv4.conf.docker0.forwarding = 1
+net.ipv4.conf.docker0.igmpv2_unsolicited_report_interval = 10000
+net.ipv4.conf.docker0.igmpv3_unsolicited_report_interval = 1000
+net.ipv4.conf.docker0.ignore_routes_with_linkdown = 0
+net.ipv4.conf.docker0.log_martians = 0
+net.ipv4.conf.docker0.mc_forwarding = 0
+net.ipv4.conf.docker0.medium_id = 0
+net.ipv4.conf.docker0.promote_secondaries = 0
+net.ipv4.conf.docker0.proxy_arp = 0
+net.ipv4.conf.docker0.proxy_arp_pvlan = 0
+net.ipv4.conf.docker0.route_localnet = 0
+net.ipv4.conf.docker0.rp_filter = 2
+net.ipv4.conf.docker0.secure_redirects = 1
+net.ipv4.conf.docker0.send_redirects = 1
+net.ipv4.conf.docker0.shared_media = 1
+net.ipv4.conf.docker0.src_valid_mark = 0
+net.ipv4.conf.docker0.tag = 0
+net.ipv4.conf.eth0.accept_local = 0
+net.ipv4.conf.eth0.accept_redirects = 1
+net.ipv4.conf.eth0.accept_source_route = 1
+net.ipv4.conf.eth0.arp_accept = 0
+net.ipv4.conf.eth0.arp_announce = 0
+net.ipv4.conf.eth0.arp_evict_nocarrier = 1
+net.ipv4.conf.eth0.arp_filter = 0
+net.ipv4.conf.eth0.arp_ignore = 0
+net.ipv4.conf.eth0.arp_notify = 0
+net.ipv4.conf.eth0.bc_forwarding = 0
+net.ipv4.conf.eth0.bootp_relay = 0
+net.ipv4.conf.eth0.disable_policy = 0
+net.ipv4.conf.eth0.disable_xfrm = 0
+net.ipv4.conf.eth0.drop_gratuitous_arp = 0
+net.ipv4.conf.eth0.drop_unicast_in_l2_multicast = 0
+net.ipv4.conf.eth0.force_igmp_version = 0
+net.ipv4.conf.eth0.forwarding = 1
+net.ipv4.conf.eth0.igmpv2_unsolicited_report_interval = 10000
+net.ipv4.conf.eth0.igmpv3_unsolicited_report_interval = 1000
+net.ipv4.conf.eth0.ignore_routes_with_linkdown = 0
+net.ipv4.conf.eth0.log_martians = 0
+net.ipv4.conf.eth0.mc_forwarding = 0
+net.ipv4.conf.eth0.medium_id = 0
+net.ipv4.conf.eth0.promote_secondaries = 1
+net.ipv4.conf.eth0.proxy_arp = 0
+net.ipv4.conf.eth0.proxy_arp_pvlan = 0
+net.ipv4.conf.eth0.route_localnet = 0
+net.ipv4.conf.eth0.rp_filter = 2
+net.ipv4.conf.eth0.secure_redirects = 1
+net.ipv4.conf.eth0.send_redirects = 1
+net.ipv4.conf.eth0.shared_media = 1
+net.ipv4.conf.eth0.src_valid_mark = 0
+net.ipv4.conf.eth0.tag = 0
+net.ipv4.conf.lo.accept_local = 0
+net.ipv4.conf.lo.accept_redirects = 1
+net.ipv4.conf.lo.accept_source_route = 1
+net.ipv4.conf.lo.arp_accept = 0
+net.ipv4.conf.lo.arp_announce = 0
+net.ipv4.conf.lo.arp_evict_nocarrier = 1
+net.ipv4.conf.lo.arp_filter = 0
+net.ipv4.conf.lo.arp_ignore = 0
+net.ipv4.conf.lo.arp_notify = 0
+net.ipv4.conf.lo.bc_forwarding = 0
+net.ipv4.conf.lo.bootp_relay = 0
+net.ipv4.conf.lo.disable_policy = 1
+net.ipv4.conf.lo.disable_xfrm = 1
+net.ipv4.conf.lo.drop_gratuitous_arp = 0
+net.ipv4.conf.lo.drop_unicast_in_l2_multicast = 0
+net.ipv4.conf.lo.force_igmp_version = 0
+net.ipv4.conf.lo.forwarding = 1
+net.ipv4.conf.lo.igmpv2_unsolicited_report_interval = 10000
+net.ipv4.conf.lo.igmpv3_unsolicited_report_interval = 1000
+net.ipv4.conf.lo.ignore_routes_with_linkdown = 0
+net.ipv4.conf.lo.log_martians = 0
+net.ipv4.conf.lo.mc_forwarding = 0
+net.ipv4.conf.lo.medium_id = 0
+net.ipv4.conf.lo.promote_secondaries = 0
+net.ipv4.conf.lo.proxy_arp = 0
+net.ipv4.conf.lo.proxy_arp_pvlan = 0
+net.ipv4.conf.lo.route_localnet = 0
+net.ipv4.conf.lo.rp_filter = 0
+net.ipv4.conf.lo.secure_redirects = 1
+net.ipv4.conf.lo.send_redirects = 1
+net.ipv4.conf.lo.shared_media = 1
+net.ipv4.conf.lo.src_valid_mark = 0
+net.ipv4.conf.lo.tag = 0
+net.ipv4.fib_multipath_hash_fields = 7
+net.ipv4.fib_multipath_hash_policy = 0
+net.ipv4.fib_multipath_use_neigh = 0
+net.ipv4.fib_notify_on_flag_change = 0
+net.ipv4.fib_sync_mem = 524288
+net.ipv4.fwmark_reflect = 0
+net.ipv4.icmp_echo_enable_probe = 0
+net.ipv4.icmp_echo_ignore_all = 0
+net.ipv4.icmp_echo_ignore_broadcasts = 1
+net.ipv4.icmp_errors_use_inbound_ifaddr = 0
+net.ipv4.icmp_ignore_bogus_error_responses = 1
+net.ipv4.icmp_msgs_burst = 50
+net.ipv4.icmp_msgs_per_sec = 1000
+net.ipv4.icmp_ratelimit = 1000
+net.ipv4.icmp_ratemask = 6168
+net.ipv4.igmp_link_local_mcast_reports = 1
+net.ipv4.igmp_max_memberships = 20
+net.ipv4.igmp_max_msf = 10
+net.ipv4.igmp_qrv = 2
+net.ipv4.inet_peer_maxttl = 600
+net.ipv4.inet_peer_minttl = 120
+net.ipv4.inet_peer_threshold = 65664
+net.ipv4.ip_autobind_reuse = 0
+net.ipv4.ip_default_ttl = 64
+net.ipv4.ip_dynaddr = 0
+net.ipv4.ip_early_demux = 1
+net.ipv4.ip_forward = 1
+net.ipv4.ip_forward_update_priority = 1
+net.ipv4.ip_forward_use_pmtu = 0
+net.ipv4.ip_local_port_range = 32768	60999
+net.ipv4.ip_local_reserved_ports = 
+net.ipv4.ip_no_pmtu_disc = 0
+net.ipv4.ip_nonlocal_bind = 0
+net.ipv4.ip_unprivileged_port_start = 1024
+net.ipv4.ipfrag_high_thresh = 4194304
+net.ipv4.ipfrag_low_thresh = 3145728
+net.ipv4.ipfrag_max_dist = 64
+net.ipv4.ipfrag_secret_interval = 0
+net.ipv4.ipfrag_time = 30
+net.ipv4.neigh.default.anycast_delay = 100
+net.ipv4.neigh.default.app_solicit = 0
+net.ipv4.neigh.default.base_reachable_time_ms = 30000
+net.ipv4.neigh.default.delay_first_probe_time = 5
+net.ipv4.neigh.default.gc_interval = 30
+net.ipv4.neigh.default.gc_stale_time = 60
+net.ipv4.neigh.default.gc_thresh1 = 128
+net.ipv4.neigh.default.gc_thresh2 = 512
+net.ipv4.neigh.default.gc_thresh3 = 1024
+net.ipv4.neigh.default.interval_probe_time_ms = 5000
+net.ipv4.neigh.default.locktime = 100
+net.ipv4.neigh.default.mcast_resolicit = 0
+net.ipv4.neigh.default.mcast_solicit = 3
+net.ipv4.neigh.default.proxy_delay = 80
+net.ipv4.neigh.default.proxy_qlen = 64
+net.ipv4.neigh.default.retrans_time_ms = 1000
+net.ipv4.neigh.default.ucast_solicit = 3
+net.ipv4.neigh.default.unres_qlen = 101
+net.ipv4.neigh.default.unres_qlen_bytes = 212992
+net.ipv4.neigh.docker0.anycast_delay = 100
+net.ipv4.neigh.docker0.app_solicit = 0
+net.ipv4.neigh.docker0.base_reachable_time_ms = 30000
+net.ipv4.neigh.docker0.delay_first_probe_time = 5
+net.ipv4.neigh.docker0.gc_stale_time = 60
+net.ipv4.neigh.docker0.interval_probe_time_ms = 5000
+net.ipv4.neigh.docker0.locktime = 100
+net.ipv4.neigh.docker0.mcast_resolicit = 0
+net.ipv4.neigh.docker0.mcast_solicit = 3
+net.ipv4.neigh.docker0.proxy_delay = 80
+net.ipv4.neigh.docker0.proxy_qlen = 64
+net.ipv4.neigh.docker0.retrans_time_ms = 1000
+net.ipv4.neigh.docker0.ucast_solicit = 3
+net.ipv4.neigh.docker0.unres_qlen = 101
+net.ipv4.neigh.docker0.unres_qlen_bytes = 212992
+net.ipv4.neigh.eth0.anycast_delay = 100
+net.ipv4.neigh.eth0.app_solicit = 0
+net.ipv4.neigh.eth0.base_reachable_time_ms = 30000
+net.ipv4.neigh.eth0.delay_first_probe_time = 5
+net.ipv4.neigh.eth0.gc_stale_time = 60
+net.ipv4.neigh.eth0.interval_probe_time_ms = 5000
+net.ipv4.neigh.eth0.locktime = 100
+net.ipv4.neigh.eth0.mcast_resolicit = 0
+net.ipv4.neigh.eth0.mcast_solicit = 3
+net.ipv4.neigh.eth0.proxy_delay = 80
+net.ipv4.neigh.eth0.proxy_qlen = 64
+net.ipv4.neigh.eth0.retrans_time_ms = 1000
+net.ipv4.neigh.eth0.ucast_solicit = 3
+net.ipv4.neigh.eth0.unres_qlen = 101
+net.ipv4.neigh.eth0.unres_qlen_bytes = 212992
+net.ipv4.neigh.lo.anycast_delay = 100
+net.ipv4.neigh.lo.app_solicit = 0
+net.ipv4.neigh.lo.base_reachable_time_ms = 30000
+net.ipv4.neigh.lo.delay_first_probe_time = 5
+net.ipv4.neigh.lo.gc_stale_time = 60
+net.ipv4.neigh.lo.interval_probe_time_ms = 5000
+net.ipv4.neigh.lo.locktime = 100
+net.ipv4.neigh.lo.mcast_resolicit = 0
+net.ipv4.neigh.lo.mcast_solicit = 3
+net.ipv4.neigh.lo.proxy_delay = 80
+net.ipv4.neigh.lo.proxy_qlen = 64
+net.ipv4.neigh.lo.retrans_time_ms = 1000
+net.ipv4.neigh.lo.ucast_solicit = 3
+net.ipv4.neigh.lo.unres_qlen = 101
+net.ipv4.neigh.lo.unres_qlen_bytes = 212992
+net.ipv4.nexthop_compat_mode = 1
+net.ipv4.ping_group_range = 1	0
+net.ipv4.raw_l3mdev_accept = 1
+net.ipv4.route.error_burst = 5000
+net.ipv4.route.error_cost = 1000
+net.ipv4.route.gc_elasticity = 8
+net.ipv4.route.gc_interval = 60
+net.ipv4.route.gc_min_interval = 0
+net.ipv4.route.gc_min_interval_ms = 500
+net.ipv4.route.gc_thresh = -1
+net.ipv4.route.gc_timeout = 300
+net.ipv4.route.max_size = 2147483647
+net.ipv4.route.min_adv_mss = 256
+net.ipv4.route.min_pmtu = 552
+net.ipv4.route.mtu_expires = 600
+net.ipv4.route.redirect_load = 20
+net.ipv4.route.redirect_number = 9
+net.ipv4.route.redirect_silence = 20480
+net.ipv4.tcp_abort_on_overflow = 0
+net.ipv4.tcp_adv_win_scale = 1
+net.ipv4.tcp_allowed_congestion_control = reno cubic
+net.ipv4.tcp_app_win = 31
+net.ipv4.tcp_autocorking = 1
+net.ipv4.tcp_available_congestion_control = reno cubic
+net.ipv4.tcp_available_ulp = espintcp mptcp tls
+net.ipv4.tcp_backlog_ack_defer = 1
+net.ipv4.tcp_base_mss = 1024
+net.ipv4.tcp_challenge_ack_limit = 2147483647
+net.ipv4.tcp_child_ehash_entries = 0
+net.ipv4.tcp_comp_sack_delay_ns = 1000000
+net.ipv4.tcp_comp_sack_nr = 44
+net.ipv4.tcp_comp_sack_slack_ns = 100000
+net.ipv4.tcp_congestion_control = cubic
+net.ipv4.tcp_dsack = 1
+net.ipv4.tcp_early_demux = 1
+net.ipv4.tcp_early_retrans = 3
+net.ipv4.tcp_ecn = 2
+net.ipv4.tcp_ecn_fallback = 1
+net.ipv4.tcp_ehash_entries = 131072
+net.ipv4.tcp_fack = 0
+net.ipv4.tcp_fastopen = 1
+net.ipv4.tcp_fastopen_blackhole_timeout_sec = 0
+net.ipv4.tcp_fastopen_key = 0800d011-16ac1e64-7f6b0149-3ac4867b
+net.ipv4.tcp_fin_timeout = 60
+net.ipv4.tcp_frto = 2
+net.ipv4.tcp_fwmark_accept = 0
+net.ipv4.tcp_invalid_ratelimit = 500
+net.ipv4.tcp_keepalive_intvl = 75
+net.ipv4.tcp_keepalive_probes = 9
+net.ipv4.tcp_keepalive_time = 7200
+net.ipv4.tcp_l3mdev_accept = 0
+net.ipv4.tcp_limit_output_bytes = 1048576
+net.ipv4.tcp_low_latency = 0
+net.ipv4.tcp_max_orphans = 65536
+net.ipv4.tcp_max_reordering = 300
+net.ipv4.tcp_max_syn_backlog = 1024
+net.ipv4.tcp_max_tw_buckets = 65536
+net.ipv4.tcp_mem = 190626	254169	381252
+net.ipv4.tcp_migrate_req = 0
+net.ipv4.tcp_min_rtt_wlen = 300
+net.ipv4.tcp_min_snd_mss = 48
+net.ipv4.tcp_min_tso_segs = 2
+net.ipv4.tcp_moderate_rcvbuf = 1
+net.ipv4.tcp_mtu_probe_floor = 48
+net.ipv4.tcp_mtu_probing = 0
+net.ipv4.tcp_no_metrics_save = 0
+net.ipv4.tcp_no_ssthresh_metrics_save = 1
+net.ipv4.tcp_notsent_lowat = 4294967295
+net.ipv4.tcp_orphan_retries = 0
+net.ipv4.tcp_pacing_ca_ratio = 120
+net.ipv4.tcp_pacing_ss_ratio = 200
+net.ipv4.tcp_pingpong_thresh = 1
+net.ipv4.tcp_plb_cong_thresh = 128
+net.ipv4.tcp_plb_enabled = 0
+net.ipv4.tcp_plb_idle_rehash_rounds = 3
+net.ipv4.tcp_plb_rehash_rounds = 12
+net.ipv4.tcp_plb_suspend_rto_sec = 60
+net.ipv4.tcp_probe_interval = 600
+net.ipv4.tcp_probe_threshold = 8
+net.ipv4.tcp_recovery = 1
+net.ipv4.tcp_reflect_tos = 0
+net.ipv4.tcp_reordering = 3
+net.ipv4.tcp_retrans_collapse = 1
+net.ipv4.tcp_retries1 = 3
+net.ipv4.tcp_retries2 = 15
+net.ipv4.tcp_rfc1337 = 0
+net.ipv4.tcp_rmem = 4096	131072	6291456
+net.ipv4.tcp_sack = 1
+net.ipv4.tcp_shrink_window = 0
+net.ipv4.tcp_slow_start_after_idle = 1
+net.ipv4.tcp_stdurg = 0
+net.ipv4.tcp_syn_linear_timeouts = 4
+net.ipv4.tcp_syn_retries = 6
+net.ipv4.tcp_synack_retries = 5
+net.ipv4.tcp_syncookies = 1
+net.ipv4.tcp_thin_linear_timeouts = 0
+net.ipv4.tcp_timestamps = 1
+net.ipv4.tcp_tso_rtt_log = 9
+net.ipv4.tcp_tso_win_divisor = 3
+net.ipv4.tcp_tw_reuse = 2
+net.ipv4.tcp_window_scaling = 1
+net.ipv4.tcp_wmem = 4096	16384	4194304
+net.ipv4.tcp_workaround_signed_windows = 0
+net.ipv4.udp_child_hash_entries = 0
+net.ipv4.udp_early_demux = 1
+net.ipv4.udp_hash_entries = 8192
+net.ipv4.udp_l3mdev_accept = 0
+net.ipv4.udp_mem = 381252	508339	762504
+net.ipv4.udp_rmem_min = 4096
+net.ipv4.udp_wmem_min = 4096
+net.ipv4.xfrm4_gc_thresh = 32768
+net.ipv6.anycast_src_echo_reply = 0
+net.ipv6.auto_flowlabels = 1
+net.ipv6.bindv6only = 0
+net.ipv6.calipso_cache_bucket_size = 10
+net.ipv6.calipso_cache_enable = 1
+net.ipv6.conf.all.accept_dad = 0
+net.ipv6.conf.all.accept_ra = 1
+net.ipv6.conf.all.accept_ra_defrtr = 1
+net.ipv6.conf.all.accept_ra_from_local = 0
+net.ipv6.conf.all.accept_ra_min_hop_limit = 1
+net.ipv6.conf.all.accept_ra_min_lft = 0
+net.ipv6.conf.all.accept_ra_mtu = 1
+net.ipv6.conf.all.accept_ra_pinfo = 1
+net.ipv6.conf.all.accept_ra_rt_info_max_plen = 0
+net.ipv6.conf.all.accept_ra_rt_info_min_plen = 0
+net.ipv6.conf.all.accept_ra_rtr_pref = 1
+net.ipv6.conf.all.accept_redirects = 1
+net.ipv6.conf.all.accept_source_route = 0
+net.ipv6.conf.all.accept_untracked_na = 0
+net.ipv6.conf.all.addr_gen_mode = 0
+net.ipv6.conf.all.autoconf = 1
+net.ipv6.conf.all.dad_transmits = 1
+net.ipv6.conf.all.disable_ipv6 = 0
+net.ipv6.conf.all.disable_policy = 0
+net.ipv6.conf.all.drop_unicast_in_l2_multicast = 0
+net.ipv6.conf.all.drop_unsolicited_na = 0
+net.ipv6.conf.all.enhanced_dad = 1
+net.ipv6.conf.all.force_mld_version = 0
+net.ipv6.conf.all.force_tllao = 0
+net.ipv6.conf.all.forwarding = 0
+net.ipv6.conf.all.hop_limit = 64
+net.ipv6.conf.all.ignore_routes_with_linkdown = 0
+net.ipv6.conf.all.ioam6_enabled = 0
+net.ipv6.conf.all.ioam6_id = 65535
+net.ipv6.conf.all.ioam6_id_wide = 4294967295
+net.ipv6.conf.all.keep_addr_on_down = 0
+net.ipv6.conf.all.max_addresses = 16
+net.ipv6.conf.all.max_desync_factor = 600
+net.ipv6.conf.all.mc_forwarding = 0
+net.ipv6.conf.all.mldv1_unsolicited_report_interval = 10000
+net.ipv6.conf.all.mldv2_unsolicited_report_interval = 1000
+net.ipv6.conf.all.mtu = 1280
+net.ipv6.conf.all.ndisc_evict_nocarrier = 1
+net.ipv6.conf.all.ndisc_notify = 0
+net.ipv6.conf.all.ndisc_tclass = 0
+net.ipv6.conf.all.proxy_ndp = 0
+net.ipv6.conf.all.ra_defrtr_metric = 1024
+net.ipv6.conf.all.ra_honor_pio_life = 0
+net.ipv6.conf.all.regen_max_retry = 3
+net.ipv6.conf.all.router_probe_interval = 60
+net.ipv6.conf.all.router_solicitation_delay = 1
+net.ipv6.conf.all.router_solicitation_interval = 4
+net.ipv6.conf.all.router_solicitation_max_interval = 3600
+net.ipv6.conf.all.router_solicitations = -1
+net.ipv6.conf.all.rpl_seg_enabled = 0
+net.ipv6.conf.all.seg6_enabled = 0
+net.ipv6.conf.all.seg6_require_hmac = 0
+net.ipv6.conf.all.suppress_frag_ndisc = 1
+net.ipv6.conf.all.temp_prefered_lft = 86400
+net.ipv6.conf.all.temp_valid_lft = 604800
+net.ipv6.conf.all.use_oif_addrs_only = 0
+net.ipv6.conf.all.use_tempaddr = 0
+net.ipv6.conf.default.accept_dad = 1
+net.ipv6.conf.default.accept_ra = 1
+net.ipv6.conf.default.accept_ra_defrtr = 1
+net.ipv6.conf.default.accept_ra_from_local = 0
+net.ipv6.conf.default.accept_ra_min_hop_limit = 1
+net.ipv6.conf.default.accept_ra_min_lft = 0
+net.ipv6.conf.default.accept_ra_mtu = 1
+net.ipv6.conf.default.accept_ra_pinfo = 1
+net.ipv6.conf.default.accept_ra_rt_info_max_plen = 0
+net.ipv6.conf.default.accept_ra_rt_info_min_plen = 0
+net.ipv6.conf.default.accept_ra_rtr_pref = 1
+net.ipv6.conf.default.accept_redirects = 1
+net.ipv6.conf.default.accept_source_route = 0
+net.ipv6.conf.default.accept_untracked_na = 0
+net.ipv6.conf.default.addr_gen_mode = 0
+net.ipv6.conf.default.autoconf = 1
+net.ipv6.conf.default.dad_transmits = 1
+net.ipv6.conf.default.disable_ipv6 = 0
+net.ipv6.conf.default.disable_policy = 0
+net.ipv6.conf.default.drop_unicast_in_l2_multicast = 0
+net.ipv6.conf.default.drop_unsolicited_na = 0
+net.ipv6.conf.default.enhanced_dad = 1
+net.ipv6.conf.default.force_mld_version = 0
+net.ipv6.conf.default.force_tllao = 0
+net.ipv6.conf.default.forwarding = 0
+net.ipv6.conf.default.hop_limit = 64
+net.ipv6.conf.default.ignore_routes_with_linkdown = 0
+net.ipv6.conf.default.ioam6_enabled = 0
+net.ipv6.conf.default.ioam6_id = 65535
+net.ipv6.conf.default.ioam6_id_wide = 4294967295
+net.ipv6.conf.default.keep_addr_on_down = 0
+net.ipv6.conf.default.max_addresses = 16
+net.ipv6.conf.default.max_desync_factor = 600
+net.ipv6.conf.default.mc_forwarding = 0
+net.ipv6.conf.default.mldv1_unsolicited_report_interval = 10000
+net.ipv6.conf.default.mldv2_unsolicited_report_interval = 1000
+net.ipv6.conf.default.mtu = 1280
+net.ipv6.conf.default.ndisc_evict_nocarrier = 1
+net.ipv6.conf.default.ndisc_notify = 0
+net.ipv6.conf.default.ndisc_tclass = 0
+net.ipv6.conf.default.proxy_ndp = 0
+net.ipv6.conf.default.ra_defrtr_metric = 1024
+net.ipv6.conf.default.ra_honor_pio_life = 0
+net.ipv6.conf.default.regen_max_retry = 3
+net.ipv6.conf.default.router_probe_interval = 60
+net.ipv6.conf.default.router_solicitation_delay = 1
+net.ipv6.conf.default.router_solicitation_interval = 4
+net.ipv6.conf.default.router_solicitation_max_interval = 3600
+net.ipv6.conf.default.router_solicitations = -1
+net.ipv6.conf.default.rpl_seg_enabled = 0
+net.ipv6.conf.default.seg6_enabled = 0
+net.ipv6.conf.default.seg6_require_hmac = 0
+net.ipv6.conf.default.suppress_frag_ndisc = 1
+net.ipv6.conf.default.temp_prefered_lft = 86400
+net.ipv6.conf.default.temp_valid_lft = 604800
+net.ipv6.conf.default.use_oif_addrs_only = 0
+net.ipv6.conf.default.use_tempaddr = 0
+net.ipv6.conf.docker0.accept_dad = 1
+net.ipv6.conf.docker0.accept_ra = 0
+net.ipv6.conf.docker0.accept_ra_defrtr = 1
+net.ipv6.conf.docker0.accept_ra_from_local = 0
+net.ipv6.conf.docker0.accept_ra_min_hop_limit = 1
+net.ipv6.conf.docker0.accept_ra_min_lft = 0
+net.ipv6.conf.docker0.accept_ra_mtu = 1
+net.ipv6.conf.docker0.accept_ra_pinfo = 1
+net.ipv6.conf.docker0.accept_ra_rt_info_max_plen = 0
+net.ipv6.conf.docker0.accept_ra_rt_info_min_plen = 0
+net.ipv6.conf.docker0.accept_ra_rtr_pref = 1
+net.ipv6.conf.docker0.accept_redirects = 1
+net.ipv6.conf.docker0.accept_source_route = 0
+net.ipv6.conf.docker0.accept_untracked_na = 0
+net.ipv6.conf.docker0.addr_gen_mode = 0
+net.ipv6.conf.docker0.autoconf = 1
+net.ipv6.conf.docker0.dad_transmits = 1
+net.ipv6.conf.docker0.disable_ipv6 = 0
+net.ipv6.conf.docker0.disable_policy = 0
+net.ipv6.conf.docker0.drop_unicast_in_l2_multicast = 0
+net.ipv6.conf.docker0.drop_unsolicited_na = 0
+net.ipv6.conf.docker0.enhanced_dad = 1
+net.ipv6.conf.docker0.force_mld_version = 0
+net.ipv6.conf.docker0.force_tllao = 0
+net.ipv6.conf.docker0.forwarding = 0
+net.ipv6.conf.docker0.hop_limit = 64
+net.ipv6.conf.docker0.ignore_routes_with_linkdown = 0
+net.ipv6.conf.docker0.ioam6_enabled = 0
+net.ipv6.conf.docker0.ioam6_id = 65535
+net.ipv6.conf.docker0.ioam6_id_wide = 4294967295
+net.ipv6.conf.docker0.keep_addr_on_down = 0
+net.ipv6.conf.docker0.max_addresses = 16
+net.ipv6.conf.docker0.max_desync_factor = 600
+net.ipv6.conf.docker0.mc_forwarding = 0
+net.ipv6.conf.docker0.mldv1_unsolicited_report_interval = 10000
+net.ipv6.conf.docker0.mldv2_unsolicited_report_interval = 1000
+net.ipv6.conf.docker0.mtu = 1500
+net.ipv6.conf.docker0.ndisc_evict_nocarrier = 1
+net.ipv6.conf.docker0.ndisc_notify = 0
+net.ipv6.conf.docker0.ndisc_tclass = 0
+net.ipv6.conf.docker0.proxy_ndp = 0
+net.ipv6.conf.docker0.ra_defrtr_metric = 1024
+net.ipv6.conf.docker0.ra_honor_pio_life = 0
+net.ipv6.conf.docker0.regen_max_retry = 3
+net.ipv6.conf.docker0.router_probe_interval = 60
+net.ipv6.conf.docker0.router_solicitation_delay = 1
+net.ipv6.conf.docker0.router_solicitation_interval = 4
+net.ipv6.conf.docker0.router_solicitation_max_interval = 3600
+net.ipv6.conf.docker0.router_solicitations = -1
+net.ipv6.conf.docker0.rpl_seg_enabled = 0
+net.ipv6.conf.docker0.seg6_enabled = 0
+net.ipv6.conf.docker0.seg6_require_hmac = 0
+net.ipv6.conf.docker0.suppress_frag_ndisc = 1
+net.ipv6.conf.docker0.temp_prefered_lft = 86400
+net.ipv6.conf.docker0.temp_valid_lft = 604800
+net.ipv6.conf.docker0.use_oif_addrs_only = 0
+net.ipv6.conf.docker0.use_tempaddr = 0
+net.ipv6.conf.eth0.accept_dad = 1
+net.ipv6.conf.eth0.accept_ra = 0
+net.ipv6.conf.eth0.accept_ra_defrtr = 1
+net.ipv6.conf.eth0.accept_ra_from_local = 0
+net.ipv6.conf.eth0.accept_ra_min_hop_limit = 1
+net.ipv6.conf.eth0.accept_ra_min_lft = 0
+net.ipv6.conf.eth0.accept_ra_mtu = 1
+net.ipv6.conf.eth0.accept_ra_pinfo = 1
+net.ipv6.conf.eth0.accept_ra_rt_info_max_plen = 0
+net.ipv6.conf.eth0.accept_ra_rt_info_min_plen = 0
+net.ipv6.conf.eth0.accept_ra_rtr_pref = 1
+net.ipv6.conf.eth0.accept_redirects = 1
+net.ipv6.conf.eth0.accept_source_route = 0
+net.ipv6.conf.eth0.accept_untracked_na = 0
+net.ipv6.conf.eth0.addr_gen_mode = 0
+net.ipv6.conf.eth0.autoconf = 1
+net.ipv6.conf.eth0.dad_transmits = 1
+net.ipv6.conf.eth0.disable_ipv6 = 0
+net.ipv6.conf.eth0.disable_policy = 0
+net.ipv6.conf.eth0.drop_unicast_in_l2_multicast = 0
+net.ipv6.conf.eth0.drop_unsolicited_na = 0
+net.ipv6.conf.eth0.enhanced_dad = 1
+net.ipv6.conf.eth0.force_mld_version = 0
+net.ipv6.conf.eth0.force_tllao = 0
+net.ipv6.conf.eth0.forwarding = 0
+net.ipv6.conf.eth0.hop_limit = 64
+net.ipv6.conf.eth0.ignore_routes_with_linkdown = 0
+net.ipv6.conf.eth0.ioam6_enabled = 0
+net.ipv6.conf.eth0.ioam6_id = 65535
+net.ipv6.conf.eth0.ioam6_id_wide = 4294967295
+net.ipv6.conf.eth0.keep_addr_on_down = 0
+net.ipv6.conf.eth0.max_addresses = 16
+net.ipv6.conf.eth0.max_desync_factor = 600
+net.ipv6.conf.eth0.mc_forwarding = 0
+net.ipv6.conf.eth0.mldv1_unsolicited_report_interval = 10000
+net.ipv6.conf.eth0.mldv2_unsolicited_report_interval = 1000
+net.ipv6.conf.eth0.mtu = 1500
+net.ipv6.conf.eth0.ndisc_evict_nocarrier = 1
+net.ipv6.conf.eth0.ndisc_notify = 0
+net.ipv6.conf.eth0.ndisc_tclass = 0
+net.ipv6.conf.eth0.proxy_ndp = 0
+net.ipv6.conf.eth0.ra_defrtr_metric = 1024
+net.ipv6.conf.eth0.ra_honor_pio_life = 0
+net.ipv6.conf.eth0.regen_max_retry = 3
+net.ipv6.conf.eth0.router_probe_interval = 60
+net.ipv6.conf.eth0.router_solicitation_delay = 1
+net.ipv6.conf.eth0.router_solicitation_interval = 4
+net.ipv6.conf.eth0.router_solicitation_max_interval = 3600
+net.ipv6.conf.eth0.router_solicitations = -1
+net.ipv6.conf.eth0.rpl_seg_enabled = 0
+net.ipv6.conf.eth0.seg6_enabled = 0
+net.ipv6.conf.eth0.seg6_require_hmac = 0
+net.ipv6.conf.eth0.suppress_frag_ndisc = 1
+net.ipv6.conf.eth0.temp_prefered_lft = 86400
+net.ipv6.conf.eth0.temp_valid_lft = 604800
+net.ipv6.conf.eth0.use_oif_addrs_only = 0
+net.ipv6.conf.eth0.use_tempaddr = 0
+net.ipv6.conf.lo.accept_dad = -1
+net.ipv6.conf.lo.accept_ra = 1
+net.ipv6.conf.lo.accept_ra_defrtr = 1
+net.ipv6.conf.lo.accept_ra_from_local = 0
+net.ipv6.conf.lo.accept_ra_min_hop_limit = 1
+net.ipv6.conf.lo.accept_ra_min_lft = 0
+net.ipv6.conf.lo.accept_ra_mtu = 1
+net.ipv6.conf.lo.accept_ra_pinfo = 1
+net.ipv6.conf.lo.accept_ra_rt_info_max_plen = 0
+net.ipv6.conf.lo.accept_ra_rt_info_min_plen = 0
+net.ipv6.conf.lo.accept_ra_rtr_pref = 1
+net.ipv6.conf.lo.accept_redirects = 1
+net.ipv6.conf.lo.accept_source_route = 0
+net.ipv6.conf.lo.accept_untracked_na = 0
+net.ipv6.conf.lo.addr_gen_mode = 0
+net.ipv6.conf.lo.autoconf = 1
+net.ipv6.conf.lo.dad_transmits = 1
+net.ipv6.conf.lo.disable_ipv6 = 0
+net.ipv6.conf.lo.disable_policy = 0
+net.ipv6.conf.lo.drop_unicast_in_l2_multicast = 0
+net.ipv6.conf.lo.drop_unsolicited_na = 0
+net.ipv6.conf.lo.enhanced_dad = 1
+net.ipv6.conf.lo.force_mld_version = 0
+net.ipv6.conf.lo.force_tllao = 0
+net.ipv6.conf.lo.forwarding = 0
+net.ipv6.conf.lo.hop_limit = 64
+net.ipv6.conf.lo.ignore_routes_with_linkdown = 0
+net.ipv6.conf.lo.ioam6_enabled = 0
+net.ipv6.conf.lo.ioam6_id = 65535
+net.ipv6.conf.lo.ioam6_id_wide = 4294967295
+net.ipv6.conf.lo.keep_addr_on_down = 0
+net.ipv6.conf.lo.max_addresses = 16
+net.ipv6.conf.lo.max_desync_factor = 600
+net.ipv6.conf.lo.mc_forwarding = 0
+net.ipv6.conf.lo.mldv1_unsolicited_report_interval = 10000
+net.ipv6.conf.lo.mldv2_unsolicited_report_interval = 1000
+net.ipv6.conf.lo.mtu = 65536
+net.ipv6.conf.lo.ndisc_evict_nocarrier = 1
+net.ipv6.conf.lo.ndisc_notify = 0
+net.ipv6.conf.lo.ndisc_tclass = 0
+net.ipv6.conf.lo.proxy_ndp = 0
+net.ipv6.conf.lo.ra_defrtr_metric = 1024
+net.ipv6.conf.lo.ra_honor_pio_life = 0
+net.ipv6.conf.lo.regen_max_retry = 3
+net.ipv6.conf.lo.router_probe_interval = 60
+net.ipv6.conf.lo.router_solicitation_delay = 1
+net.ipv6.conf.lo.router_solicitation_interval = 4
+net.ipv6.conf.lo.router_solicitation_max_interval = 3600
+net.ipv6.conf.lo.router_solicitations = -1
+net.ipv6.conf.lo.rpl_seg_enabled = 0
+net.ipv6.conf.lo.seg6_enabled = 0
+net.ipv6.conf.lo.seg6_require_hmac = 0
+net.ipv6.conf.lo.suppress_frag_ndisc = 1
+net.ipv6.conf.lo.temp_prefered_lft = 86400
+net.ipv6.conf.lo.temp_valid_lft = 604800
+net.ipv6.conf.lo.use_oif_addrs_only = 0
+net.ipv6.conf.lo.use_tempaddr = -1
+net.ipv6.fib_multipath_hash_fields = 7
+net.ipv6.fib_multipath_hash_policy = 0
+net.ipv6.fib_notify_on_flag_change = 0
+net.ipv6.flowlabel_consistency = 1
+net.ipv6.flowlabel_reflect = 0
+net.ipv6.flowlabel_state_ranges = 0
+net.ipv6.fwmark_reflect = 0
+net.ipv6.icmp.echo_ignore_all = 0
+net.ipv6.icmp.echo_ignore_anycast = 0
+net.ipv6.icmp.echo_ignore_multicast = 0
+net.ipv6.icmp.error_anycast_as_unicast = 0
+net.ipv6.icmp.ratelimit = 1000
+net.ipv6.icmp.ratemask = 0-1,3-127
+net.ipv6.idgen_delay = 1
+net.ipv6.idgen_retries = 3
+net.ipv6.ioam6_id = 16777215
+net.ipv6.ioam6_id_wide = 72057594037927935
+net.ipv6.ip6frag_high_thresh = 4194304
+net.ipv6.ip6frag_low_thresh = 3145728
+net.ipv6.ip6frag_secret_interval = 0
+net.ipv6.ip6frag_time = 60
+net.ipv6.ip_nonlocal_bind = 0
+net.ipv6.max_dst_opts_length = 2147483647
+net.ipv6.max_dst_opts_number = 8
+net.ipv6.max_hbh_length = 2147483647
+net.ipv6.max_hbh_opts_number = 8
+net.ipv6.mld_max_msf = 64
+net.ipv6.mld_qrv = 2
+net.ipv6.neigh.default.anycast_delay = 100
+net.ipv6.neigh.default.app_solicit = 0
+net.ipv6.neigh.default.base_reachable_time_ms = 30000
+net.ipv6.neigh.default.delay_first_probe_time = 5
+net.ipv6.neigh.default.gc_interval = 30
+net.ipv6.neigh.default.gc_stale_time = 60
+net.ipv6.neigh.default.gc_thresh1 = 128
+net.ipv6.neigh.default.gc_thresh2 = 512
+net.ipv6.neigh.default.gc_thresh3 = 1024
+net.ipv6.neigh.default.interval_probe_time_ms = 5000
+net.ipv6.neigh.default.locktime = 0
+net.ipv6.neigh.default.mcast_resolicit = 0
+net.ipv6.neigh.default.mcast_solicit = 3
+net.ipv6.neigh.default.proxy_delay = 80
+net.ipv6.neigh.default.proxy_qlen = 64
+net.ipv6.neigh.default.retrans_time_ms = 1000
+net.ipv6.neigh.default.ucast_solicit = 3
+net.ipv6.neigh.default.unres_qlen = 101
+net.ipv6.neigh.default.unres_qlen_bytes = 212992
+net.ipv6.neigh.docker0.anycast_delay = 100
+net.ipv6.neigh.docker0.app_solicit = 0
+net.ipv6.neigh.docker0.base_reachable_time_ms = 30000
+net.ipv6.neigh.docker0.delay_first_probe_time = 5
+net.ipv6.neigh.docker0.gc_stale_time = 60
+net.ipv6.neigh.docker0.interval_probe_time_ms = 5000
+net.ipv6.neigh.docker0.locktime = 0
+net.ipv6.neigh.docker0.mcast_resolicit = 0
+net.ipv6.neigh.docker0.mcast_solicit = 3
+net.ipv6.neigh.docker0.proxy_delay = 80
+net.ipv6.neigh.docker0.proxy_qlen = 64
+net.ipv6.neigh.docker0.retrans_time_ms = 1000
+net.ipv6.neigh.docker0.ucast_solicit = 3
+net.ipv6.neigh.docker0.unres_qlen = 101
+net.ipv6.neigh.docker0.unres_qlen_bytes = 212992
+net.ipv6.neigh.eth0.anycast_delay = 100
+net.ipv6.neigh.eth0.app_solicit = 0
+net.ipv6.neigh.eth0.base_reachable_time_ms = 30000
+net.ipv6.neigh.eth0.delay_first_probe_time = 5
+net.ipv6.neigh.eth0.gc_stale_time = 60
+net.ipv6.neigh.eth0.interval_probe_time_ms = 5000
+net.ipv6.neigh.eth0.locktime = 0
+net.ipv6.neigh.eth0.mcast_resolicit = 0
+net.ipv6.neigh.eth0.mcast_solicit = 3
+net.ipv6.neigh.eth0.proxy_delay = 80
+net.ipv6.neigh.eth0.proxy_qlen = 64
+net.ipv6.neigh.eth0.retrans_time_ms = 1000
+net.ipv6.neigh.eth0.ucast_solicit = 3
+net.ipv6.neigh.eth0.unres_qlen = 101
+net.ipv6.neigh.eth0.unres_qlen_bytes = 212992
+net.ipv6.neigh.lo.anycast_delay = 100
+net.ipv6.neigh.lo.app_solicit = 0
+net.ipv6.neigh.lo.base_reachable_time_ms = 30000
+net.ipv6.neigh.lo.delay_first_probe_time = 5
+net.ipv6.neigh.lo.gc_stale_time = 60
+net.ipv6.neigh.lo.interval_probe_time_ms = 5000
+net.ipv6.neigh.lo.locktime = 0
+net.ipv6.neigh.lo.mcast_resolicit = 0
+net.ipv6.neigh.lo.mcast_solicit = 3
+net.ipv6.neigh.lo.proxy_delay = 80
+net.ipv6.neigh.lo.proxy_qlen = 64
+net.ipv6.neigh.lo.retrans_time_ms = 1000
+net.ipv6.neigh.lo.ucast_solicit = 3
+net.ipv6.neigh.lo.unres_qlen = 101
+net.ipv6.neigh.lo.unres_qlen_bytes = 212992
+net.ipv6.route.gc_elasticity = 9
+net.ipv6.route.gc_interval = 30
+net.ipv6.route.gc_min_interval = 0
+net.ipv6.route.gc_min_interval_ms = 500
+net.ipv6.route.gc_thresh = 1024
+net.ipv6.route.gc_timeout = 60
+net.ipv6.route.max_size = 2147483647
+net.ipv6.route.min_adv_mss = 1220
+net.ipv6.route.mtu_expires = 600
+net.ipv6.route.skip_notify_on_dev_down = 0
+net.ipv6.seg6_flowlabel = 0
+net.ipv6.xfrm6_gc_thresh = 32768
+net.mptcp.add_addr_timeout = 120
+net.mptcp.allow_join_initial_addr_port = 1
+net.mptcp.checksum_enabled = 0
+net.mptcp.close_timeout = 60
+net.mptcp.enabled = 1
+net.mptcp.pm_type = 0
+net.mptcp.scheduler = default
+net.mptcp.stale_loss_cnt = 4
+net.netfilter.nf_conntrack_acct = 0
+net.netfilter.nf_conntrack_buckets = 262144
+net.netfilter.nf_conntrack_checksum = 1
+net.netfilter.nf_conntrack_count = 145
+net.netfilter.nf_conntrack_dccp_loose = 1
+net.netfilter.nf_conntrack_dccp_timeout_closereq = 64
+net.netfilter.nf_conntrack_dccp_timeout_closing = 64
+net.netfilter.nf_conntrack_dccp_timeout_open = 43200
+net.netfilter.nf_conntrack_dccp_timeout_partopen = 480
+net.netfilter.nf_conntrack_dccp_timeout_request = 240
+net.netfilter.nf_conntrack_dccp_timeout_respond = 480
+net.netfilter.nf_conntrack_dccp_timeout_timewait = 240
+net.netfilter.nf_conntrack_events = 2
+net.netfilter.nf_conntrack_expect_max = 4096
+net.netfilter.nf_conntrack_frag6_high_thresh = 4194304
+net.netfilter.nf_conntrack_frag6_low_thresh = 3145728
+net.netfilter.nf_conntrack_frag6_timeout = 60
+net.netfilter.nf_conntrack_generic_timeout = 600
+net.netfilter.nf_conntrack_gre_timeout = 30
+net.netfilter.nf_conntrack_gre_timeout_stream = 180
+net.netfilter.nf_conntrack_icmp_timeout = 30
+net.netfilter.nf_conntrack_icmpv6_timeout = 30
+net.netfilter.nf_conntrack_log_invalid = 0
+net.netfilter.nf_conntrack_max = 262144
+net.netfilter.nf_conntrack_sctp_timeout_closed = 10
+net.netfilter.nf_conntrack_sctp_timeout_cookie_echoed = 3
+net.netfilter.nf_conntrack_sctp_timeout_cookie_wait = 3
+net.netfilter.nf_conntrack_sctp_timeout_established = 210
+net.netfilter.nf_conntrack_sctp_timeout_heartbeat_sent = 30
+net.netfilter.nf_conntrack_sctp_timeout_shutdown_ack_sent = 3
+net.netfilter.nf_conntrack_sctp_timeout_shutdown_recd = 3
+net.netfilter.nf_conntrack_sctp_timeout_shutdown_sent = 3
+net.netfilter.nf_conntrack_tcp_be_liberal = 1
+net.netfilter.nf_conntrack_tcp_ignore_invalid_rst = 0
+net.netfilter.nf_conntrack_tcp_loose = 1
+net.netfilter.nf_conntrack_tcp_max_retrans = 3
+net.netfilter.nf_conntrack_tcp_timeout_close = 10
+net.netfilter.nf_conntrack_tcp_timeout_close_wait = 60
+net.netfilter.nf_conntrack_tcp_timeout_established = 432000
+net.netfilter.nf_conntrack_tcp_timeout_fin_wait = 120
+net.netfilter.nf_conntrack_tcp_timeout_last_ack = 30
+net.netfilter.nf_conntrack_tcp_timeout_max_retrans = 300
+net.netfilter.nf_conntrack_tcp_timeout_syn_recv = 60
+net.netfilter.nf_conntrack_tcp_timeout_syn_sent = 120
+net.netfilter.nf_conntrack_tcp_timeout_time_wait = 120
+net.netfilter.nf_conntrack_tcp_timeout_unacknowledged = 300
+net.netfilter.nf_conntrack_timestamp = 0
+net.netfilter.nf_conntrack_udp_timeout = 30
+net.netfilter.nf_conntrack_udp_timeout_stream = 120
+net.netfilter.nf_flowtable_tcp_timeout = 30
+net.netfilter.nf_flowtable_udp_timeout = 30
+net.netfilter.nf_hooks_lwtunnel = 0
+net.netfilter.nf_log.0 = NONE
+net.netfilter.nf_log.1 = NONE
+net.netfilter.nf_log.10 = NONE
+net.netfilter.nf_log.2 = NONE
+net.netfilter.nf_log.3 = NONE
+net.netfilter.nf_log.4 = NONE
+net.netfilter.nf_log.5 = NONE
+net.netfilter.nf_log.6 = NONE
+net.netfilter.nf_log.7 = NONE
+net.netfilter.nf_log.8 = NONE
+net.netfilter.nf_log.9 = NONE
+net.netfilter.nf_log_all_netns = 0
+net.nf_conntrack_max = 262144
+net.unix.max_dgram_qlen = 512
+user.max_cgroup_namespaces = 63938
+user.max_fanotify_groups = 128
+user.max_fanotify_marks = 132601
+user.max_inotify_instances = 1280
+user.max_inotify_watches = 655360
+user.max_ipc_namespaces = 63938
+user.max_mnt_namespaces = 63938
+user.max_net_namespaces = 63938
+user.max_pid_namespaces = 63938
+user.max_time_namespaces = 63938
+user.max_user_namespaces = 63938
+user.max_uts_namespaces = 63938
+vm.admin_reserve_kbytes = 8192
+vm.compact_unevictable_allowed = 1
+vm.compaction_proactiveness = 20
+vm.dirty_background_bytes = 0
+vm.dirty_background_ratio = 10
+vm.dirty_bytes = 0
+vm.dirty_expire_centisecs = 3000
+vm.dirty_ratio = 20
+vm.dirty_writeback_centisecs = 500
+vm.dirtytime_expire_seconds = 43200
+vm.extfrag_threshold = 500
+vm.hugetlb_optimize_vmemmap = 0
+vm.hugetlb_shm_group = 0
+vm.laptop_mode = 0
+vm.legacy_va_layout = 0
+vm.lowmem_reserve_ratio = 256	256	32	0	0
+vm.max_map_count = 262144
+vm.memfd_noexec = 0
+vm.memory_failure_early_kill = 0
+vm.memory_failure_recovery = 1
+vm.min_free_kbytes = 67584
+vm.min_slab_ratio = 5
+vm.min_unmapped_ratio = 1
+vm.mmap_min_addr = 65536
+vm.mmap_rnd_bits = 28
+vm.mmap_rnd_compat_bits = 16
+vm.nr_hugepages = 0
+vm.nr_hugepages_mempolicy = 0
+vm.nr_overcommit_hugepages = 0
+vm.numa_stat = 1
+vm.numa_zonelist_order = Node
+vm.oom_dump_tasks = 1
+vm.oom_kill_allocating_task = 0
+vm.overcommit_kbytes = 0
+vm.overcommit_memory = 0
+vm.overcommit_ratio = 50
+vm.page-cluster = 3
+vm.page_lock_unfairness = 5
+vm.panic_on_oom = 0
+vm.percpu_pagelist_high_fraction = 0
+vm.stat_interval = 1
+vm.swappiness = 60
+vm.unprivileged_userfaultfd = 0
+vm.user_reserve_kbytes = 131072
+vm.vfs_cache_pressure = 100
+vm.watermark_boost_factor = 15000
+vm.watermark_scale_factor = 10
+vm.zone_reclaim_mode = 0
+------------------------------------------------------------
+16. /sys/kernel/mm/transparent_hugepage
+[always] madvise never
+------------------------------------------------------------
+17. /sys/kernel/mm/transparent_hugepage/khugepaged
+1
+------------------------------------------------------------
+18. OS release
+PRETTY_NAME="Ubuntu 24.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.1 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+------------------------------------------------------------
+19. Disk information
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda       8:0    0   75G  0 disk 
+├─sda1    8:1    0   74G  0 part /
+├─sda14   8:14   0    4M  0 part 
+├─sda15   8:15   0  106M  0 part /boot/efi
+└─sda16 259:0    0  913M  0 part /boot
+sdb       8:16   0   75G  0 disk 
+└─sdb1    8:17   0   75G  0 part /mnt
+------------------------------------------------------------
+20. /sys/devices/virtual/dmi/id
+bios_date
+bios_vendor
+bios_version
+board_name
+board_serial
+board_vendor
+board_version
+chassis_asset_tag
+chassis_serial
+chassis_type
+chassis_vendor
+chassis_version
+modalias
+power
+product_name
+product_serial
+product_uuid
+product_version
+subsystem
+sys_vendor
+uevent
+------------------------------------------------------------
+21. dmidecode
+# dmidecode 3.5
+Getting SMBIOS data from sysfs.
+SMBIOS 2.3 present.
+338 structures occupying 17307 bytes.
+Table at 0x000F93D0.
+
+Handle 0x0000, DMI type 0, 20 bytes
+BIOS Information
+	Vendor: American Megatrends Inc.
+	Version: 090008 
+	Release Date: 12/07/2018
+	Address: 0xF0000
+	Runtime Size: 64 kB
+	ROM Size: 256 kB
+	Characteristics:
+		ISA is supported
+		PCI is supported
+		PNP is supported
+		BIOS is upgradeable
+		BIOS shadowing is allowed
+		ESCD support is available
+		Boot from CD is supported
+		Selectable boot is supported
+		BIOS ROM is socketed
+		EDD is supported
+		5.25"/360 kB floppy services are supported (int 13h)
+		5.25"/1.2 MB floppy services are supported (int 13h)
+		3.5"/720 kB floppy services are supported (int 13h)
+		3.5"/2.88 MB floppy services are supported (int 13h)
+		Print screen service is supported (int 5h)
+		8042 keyboard services are supported (int 9h)
+		Serial services are supported (int 14h)
+		Printer services are supported (int 17h)
+		CGA/mono video services are supported (int 10h)
+		AGP is supported
+		LS-120 boot is supported
+		ATAPI Zip drive boot is supported
+		BIOS boot specification is supported
+
+Handle 0x0001, DMI type 1, 25 bytes
+System Information
+	Manufacturer: Microsoft Corporation
+	Product Name: Virtual Machine
+	Version: 7.0
+	Serial Number: 0000-0006-1130-1941-7083-6617-89
+	UUID: c5ced554-568c-dd4d-9241-77046d18c84f
+	Wake-up Type: Power Switch
+
+Handle 0x0002, DMI type 2, 8 bytes
+Base Board Information
+	Manufacturer: Microsoft Corporation
+	Product Name: Virtual Machine
+	Version: 7.0
+	Serial Number: 0000-0010-5388-3546-3917-5865-11
+
+Handle 0x0003, DMI type 3, 17 bytes
+Chassis Information
+	Manufacturer: Microsoft Corporation
+	Type: Desktop
+	Lock: Not Present
+	Version: 7.0
+	Serial Number: 8698-7168-6663-1169-5821-9165-41
+	Asset Tag: 7783-7084-3265-9085-8269-3286-77
+	Boot-up State: Safe
+	Power Supply State: Safe
+	Thermal State: Other
+	Security Status: Other
+	OEM Information: 0x00000000
+
+Handle 0x0004, DMI type 11, 5 bytes
+OEM Strings
+	String 1: [MS_VM_CERT/SHA1/9b80ca0d5dd061ec9da4e494f4c3fd1196270c22]
+	String 2: 00000000000000000000000000000000
+	String 3: To be filed by MSFT
+
+Handle 0x0005, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Zen
+	Manufacturer: None
+	ID: 11 0F A0 00 FF FB 8B 17
+	Signature: Family 25, Model 1, Stepping 1
+	Flags:
+		FPU (Floating-point unit on-chip)
+		VME (Virtual mode extension)
+		DE (Debugging extension)
+		PSE (Page size extension)
+		TSC (Time stamp counter)
+		MSR (Model specific registers)
+		PAE (Physical address extension)
+		MCE (Machine check exception)
+		CX8 (CMPXCHG8 instruction supported)
+		APIC (On-chip APIC hardware supported)
+		SEP (Fast system call)
+		MTRR (Memory type range registers)
+		PGE (Page global enable)
+		MCA (Machine check architecture)
+		CMOV (Conditional move instruction supported)
+		PAT (Page attribute table)
+		PSE-36 (36-bit page size extension)
+		CLFSH (CLFLUSH instruction supported)
+		MMX (MMX technology supported)
+		FXSR (FXSAVE and FXSTOR instructions supported)
+		SSE (Streaming SIMD extensions)
+		SSE2 (Streaming SIMD extensions 2)
+		HTT (Multi-threading)
+	Version: AMD EPYC 7763 64-Core Processor                
+	Voltage: 1.1 V
+	External Clock: 100 MHz
+	Max Speed: 3525 MHz
+	Current Speed: 2450 MHz
+	Status: Populated, Enabled
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0006, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Zen
+	Manufacturer: None
+	ID: 11 0F A0 00 FF FB 8B 17
+	Signature: Family 25, Model 1, Stepping 1
+	Flags:
+		FPU (Floating-point unit on-chip)
+		VME (Virtual mode extension)
+		DE (Debugging extension)
+		PSE (Page size extension)
+		TSC (Time stamp counter)
+		MSR (Model specific registers)
+		PAE (Physical address extension)
+		MCE (Machine check exception)
+		CX8 (CMPXCHG8 instruction supported)
+		APIC (On-chip APIC hardware supported)
+		SEP (Fast system call)
+		MTRR (Memory type range registers)
+		PGE (Page global enable)
+		MCA (Machine check architecture)
+		CMOV (Conditional move instruction supported)
+		PAT (Page attribute table)
+		PSE-36 (36-bit page size extension)
+		CLFSH (CLFLUSH instruction supported)
+		MMX (MMX technology supported)
+		FXSR (FXSAVE and FXSTOR instructions supported)
+		SSE (Streaming SIMD extensions)
+		SSE2 (Streaming SIMD extensions 2)
+		HTT (Multi-threading)
+	Version: AMD EPYC 7763 64-Core Processor                
+	Voltage: 1.1 V
+	External Clock: 100 MHz
+	Max Speed: 3525 MHz
+	Current Speed: 2450 MHz
+	Status: Populated, Enabled
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0007, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Zen
+	Manufacturer: None
+	ID: 11 0F A0 00 FF FB 8B 17
+	Signature: Family 25, Model 1, Stepping 1
+	Flags:
+		FPU (Floating-point unit on-chip)
+		VME (Virtual mode extension)
+		DE (Debugging extension)
+		PSE (Page size extension)
+		TSC (Time stamp counter)
+		MSR (Model specific registers)
+		PAE (Physical address extension)
+		MCE (Machine check exception)
+		CX8 (CMPXCHG8 instruction supported)
+		APIC (On-chip APIC hardware supported)
+		SEP (Fast system call)
+		MTRR (Memory type range registers)
+		PGE (Page global enable)
+		MCA (Machine check architecture)
+		CMOV (Conditional move instruction supported)
+		PAT (Page attribute table)
+		PSE-36 (36-bit page size extension)
+		CLFSH (CLFLUSH instruction supported)
+		MMX (MMX technology supported)
+		FXSR (FXSAVE and FXSTOR instructions supported)
+		SSE (Streaming SIMD extensions)
+		SSE2 (Streaming SIMD extensions 2)
+		HTT (Multi-threading)
+	Version: AMD EPYC 7763 64-Core Processor                
+	Voltage: 1.1 V
+	External Clock: 100 MHz
+	Max Speed: 3525 MHz
+	Current Speed: 2450 MHz
+	Status: Populated, Enabled
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0008, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Zen
+	Manufacturer: None
+	ID: 11 0F A0 00 FF FB 8B 17
+	Signature: Family 25, Model 1, Stepping 1
+	Flags:
+		FPU (Floating-point unit on-chip)
+		VME (Virtual mode extension)
+		DE (Debugging extension)
+		PSE (Page size extension)
+		TSC (Time stamp counter)
+		MSR (Model specific registers)
+		PAE (Physical address extension)
+		MCE (Machine check exception)
+		CX8 (CMPXCHG8 instruction supported)
+		APIC (On-chip APIC hardware supported)
+		SEP (Fast system call)
+		MTRR (Memory type range registers)
+		PGE (Page global enable)
+		MCA (Machine check architecture)
+		CMOV (Conditional move instruction supported)
+		PAT (Page attribute table)
+		PSE-36 (36-bit page size extension)
+		CLFSH (CLFLUSH instruction supported)
+		MMX (MMX technology supported)
+		FXSR (FXSAVE and FXSTOR instructions supported)
+		SSE (Streaming SIMD extensions)
+		SSE2 (Streaming SIMD extensions 2)
+		HTT (Multi-threading)
+	Version: AMD EPYC 7763 64-Core Processor                
+	Voltage: 1.1 V
+	External Clock: 100 MHz
+	Max Speed: 3525 MHz
+	Current Speed: 2450 MHz
+	Status: Populated, Enabled
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0009, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x000A, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x000B, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x000C, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x000D, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x000E, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x000F, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0010, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0011, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0012, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0013, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0014, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0015, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0016, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0017, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0018, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0019, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x001A, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x001B, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x001C, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x001D, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x001E, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x001F, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0020, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0021, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0022, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0023, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0024, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0025, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0026, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0027, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0028, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0029, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x002A, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x002B, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x002C, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x002D, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x002E, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x002F, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0030, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0031, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0032, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0033, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0034, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0035, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0036, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0037, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0038, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0039, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x003A, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x003B, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x003C, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x003D, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x003E, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x003F, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0040, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0041, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0042, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0043, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0044, DMI type 4, 35 bytes
+Processor Information
+	Socket Designation: None
+	Type: Central Processor
+	Family: Unknown
+	Manufacturer: None
+	ID: 00 00 00 00 00 00 00 00
+	Version: None
+	Voltage: 2.9 V
+	External Clock: Unknown
+	Max Speed: Unknown
+	Current Speed: Unknown
+	Status: Unpopulated
+	Upgrade: None
+	L1 Cache Handle: Not Provided
+	L2 Cache Handle: Not Provided
+	L3 Cache Handle: Not Provided
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0045, DMI type 8, 9 bytes
+Port Connector Information
+	Internal Reference Designator: USB
+	Internal Connector Type: Centronics
+	External Reference Designator: USB1
+	External Connector Type: Centronics
+	Port Type: USB
+
+Handle 0x0046, DMI type 8, 9 bytes
+Port Connector Information
+	Internal Reference Designator: USB
+	Internal Connector Type: Centronics
+	External Reference Designator: USB2
+	External Connector Type: Centronics
+	Port Type: USB
+
+Handle 0x0047, DMI type 8, 9 bytes
+Port Connector Information
+	Internal Reference Designator: COM1
+	Internal Connector Type: DB-9 female
+	External Reference Designator: COM1
+	External Connector Type: DB-9 female
+	Port Type: Serial Port 16550A Compatible
+
+Handle 0x0048, DMI type 8, 9 bytes
+Port Connector Information
+	Internal Reference Designator: COM2
+	Internal Connector Type: DB-9 female
+	External Reference Designator: COM2
+	External Connector Type: DB-9 female
+	Port Type: Serial Port 16550A Compatible
+
+Handle 0x0049, DMI type 8, 9 bytes
+Port Connector Information
+	Internal Reference Designator: Printer
+	Internal Connector Type: DB-25 male
+	External Reference Designator: Lpt1
+	External Connector Type: DB-25 male
+	Port Type: Parallel Port ECP/EPP
+
+Handle 0x004A, DMI type 8, 9 bytes
+Port Connector Information
+	Internal Reference Designator: Video
+	Internal Connector Type: DB-15 male
+	External Reference Designator: Video
+	External Connector Type: DB-15 female
+	Port Type: Video Port
+
+Handle 0x004B, DMI type 8, 9 bytes
+Port Connector Information
+	Internal Reference Designator: Keyboard
+	Internal Connector Type: PS/2
+	External Reference Designator: Keyboard
+	External Connector Type: PS/2
+	Port Type: Keyboard Port
+
+Handle 0x004C, DMI type 8, 9 bytes
+Port Connector Information
+	Internal Reference Designator: Mouse
+	Internal Connector Type: PS/2
+	External Reference Designator: Mouse
+	External Connector Type: PS/2
+	Port Type: Mouse Port
+
+Handle 0x004D, DMI type 10, 6 bytes
+On Board Device Information
+	Type: Video
+	Status: Enabled
+	Description: To Be filled by O.E.M.
+
+Handle 0x004E, DMI type 12, 5 bytes
+System Configuration Options
+	Option 1: To Be Filled By O.E.M.
+	Option 2: To Be Filled By O.E.M.
+	Option 3: To Be Filled By O.E.M.
+
+Handle 0x004F, DMI type 13, 22 bytes
+BIOS Language Information
+	Language Description Format: Abbreviated
+	Installable Languages: 1
+		enUS
+	Currently Installed Language: enUS
+
+Handle 0x0050, DMI type 18, 23 bytes
+32-bit Memory Error Information
+	Type: OK
+	Granularity: Unknown
+	Operation: Unknown
+	Vendor Syndrome: Unknown
+	Memory Array Address: Unknown
+	Device Address: Unknown
+	Resolution: Unknown
+
+Handle 0x0051, DMI type 16, 15 bytes
+Physical Memory Array
+	Location: Unknown
+	Use: System Memory
+	Error Correction Type: None
+	Maximum Capacity: Unknown
+	Error Information Handle: 0x0050
+	Number Of Devices: 125
+
+Handle 0x0052, DMI type 19, 15 bytes
+Memory Array Mapped Address
+	Starting Address: 0x00000000000
+	Ending Address: 0x000400003FF
+	Range Size: 1 GB
+	Physical Array Handle: 0x0051
+	Partition Width: 1
+
+Handle 0x0053, DMI type 19, 15 bytes
+Memory Array Mapped Address
+	Starting Address: 0x00100000000
+	Ending Address: 0x004C00003FF
+	Range Size: 15 GB
+	Physical Array Handle: 0x0051
+	Partition Width: 1
+
+Handle 0x0054, DMI type 126, 15 bytes
+Inactive
+
+Handle 0x0055, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: 1 GB
+	Form Factor: Unknown
+	Set: None
+	Locator: M0
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+	Speed: Unknown
+	Manufacturer: Microsoft
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0056, DMI type 20, 19 bytes
+Memory Device Mapped Address
+	Starting Address: 0x00000000000
+	Ending Address: 0x000400003FF
+	Range Size: 1 GB
+	Physical Device Handle: 0x0055
+	Memory Array Mapped Address Handle: 0x0052
+	Partition Row Position: <OUT OF SPEC>
+
+Handle 0x0057, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: 15 GB
+	Form Factor: Unknown
+	Set: None
+	Locator: M1
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+	Speed: Unknown
+	Manufacturer: Microsoft
+	Serial Number: None
+	Asset Tag: None
+	Part Number: None
+
+Handle 0x0058, DMI type 20, 19 bytes
+Memory Device Mapped Address
+	Starting Address: 0x00100000000
+	Ending Address: 0x004C00003FF
+	Range Size: 15 GB
+	Physical Device Handle: 0x0057
+	Memory Array Mapped Address Handle: 0x0053
+	Partition Row Position: <OUT OF SPEC>
+
+Handle 0x0059, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M2
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x005A, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x005B, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M3
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x005C, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x005D, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M4
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x005E, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x005F, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M5
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0060, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0061, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M6
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0062, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0063, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M7
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0064, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0065, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M8
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0066, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0067, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M9
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0068, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0069, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M10
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x006A, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x006B, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M11
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x006C, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x006D, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M12
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x006E, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x006F, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M13
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0070, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0071, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M14
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0072, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0073, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M15
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0074, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0075, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M16
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0076, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0077, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M17
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0078, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0079, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M18
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x007A, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x007B, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M19
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x007C, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x007D, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M20
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x007E, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x007F, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M21
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0080, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0081, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M22
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0082, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0083, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M23
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0084, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0085, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M24
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0086, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0087, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M25
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0088, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0089, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M26
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x008A, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x008B, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M27
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x008C, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x008D, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M28
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x008E, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x008F, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M29
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0090, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0091, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M30
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0092, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0093, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M31
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0094, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0095, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M32
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0096, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0097, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M33
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0098, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0099, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M34
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x009A, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x009B, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M35
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x009C, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x009D, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M36
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x009E, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x009F, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M37
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00A0, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00A1, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M38
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00A2, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00A3, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M39
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00A4, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00A5, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M40
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00A6, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00A7, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M41
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00A8, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00A9, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M42
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00AA, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00AB, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M43
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00AC, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00AD, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M44
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00AE, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00AF, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M45
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00B0, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00B1, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M46
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00B2, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00B3, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M47
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00B4, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00B5, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M48
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00B6, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00B7, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M49
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00B8, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00B9, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M50
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00BA, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00BB, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M51
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00BC, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00BD, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M52
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00BE, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00BF, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M53
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00C0, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00C1, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M54
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00C2, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00C3, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M55
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00C4, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00C5, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M56
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00C6, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00C7, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M57
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00C8, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00C9, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M58
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00CA, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00CB, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M59
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00CC, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00CD, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M60
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00CE, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00CF, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M61
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00D0, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00D1, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M62
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00D2, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00D3, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M63
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00D4, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00D5, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M64
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00D6, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00D7, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M65
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00D8, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00D9, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M66
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00DA, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00DB, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M67
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00DC, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00DD, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M68
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00DE, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00DF, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M69
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00E0, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00E1, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M70
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00E2, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00E3, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M71
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00E4, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00E5, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M71
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00E6, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00E7, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M73
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00E8, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00E9, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M74
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00EA, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00EB, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M75
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00EC, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00ED, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M76
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00EE, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00EF, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M77
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00F0, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00F1, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M78
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00F2, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00F3, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M79
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00F4, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00F5, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M80
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00F6, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00F7, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M81
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00F8, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00F9, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M82
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00FA, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00FB, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M83
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00FC, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00FD, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M84
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x00FE, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x00FF, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M85
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0100, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0101, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M86
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0102, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0103, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M87
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0104, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0105, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M88
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0106, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0107, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M89
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0108, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0109, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M90
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x010A, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x010B, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M91
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x010C, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x010D, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M92
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x010E, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x010F, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M93
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0110, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0111, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M94
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0112, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0113, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M95
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0114, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0115, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M96
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0116, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0117, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M97
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0118, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0119, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M98
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x011A, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x011B, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M99
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x011C, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x011D, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M100
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x011E, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x011F, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M101
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0120, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0121, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M102
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0122, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0123, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M103
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0124, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0125, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M104
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0126, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0127, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M105
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0128, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0129, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M106
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x012A, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x012B, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M107
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x012C, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x012D, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M108
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x012E, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x012F, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M109
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0130, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0131, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M110
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0132, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0133, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M111
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0134, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0135, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M112
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0136, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0137, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M113
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0138, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0139, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M114
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x013A, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x013B, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M115
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x013C, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x013D, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M116
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x013E, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x013F, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M117
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0140, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0141, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M118
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0142, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0143, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M119
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0144, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0145, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M120
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0146, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0147, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M121
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x0148, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x0149, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M122
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x014A, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x014B, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M123
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x014C, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x014D, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x0051
+	Error Information Handle: 0x0050
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: M124
+	Bank Locator: None
+	Type: Other
+	Type Detail: Unknown
+
+Handle 0x014E, DMI type 126, 19 bytes
+Inactive
+
+Handle 0x014F, DMI type 23, 13 bytes
+System Reset
+	Status: Disabled
+	Watchdog Timer: Not Present
+
+Handle 0x0150, DMI type 32, 20 bytes
+System Boot Information
+	Status: No errors detected
+
+Handle 0x0151, DMI type 127, 4 bytes
+End Of Table
+
+------------------------------------------------------------
+22. BIOS
+# dmidecode 3.5
+Getting SMBIOS data from sysfs.
+SMBIOS 2.3 present.
+
+Handle 0x0000, DMI type 0, 20 bytes
+BIOS Information
+	Vendor: American Megatrends Inc.
+	Version: 090008 
+	Release Date: 12/07/2018
+	Address: 0xF0000
+	Runtime Size: 64 kB
+	ROM Size: 256 kB
+	Characteristics:
+		ISA is supported
+		PCI is supported
+		PNP is supported
+		BIOS is upgradeable
+		BIOS shadowing is allowed
+		ESCD support is available
+		Boot from CD is supported
+		Selectable boot is supported
+		BIOS ROM is socketed
+		EDD is supported
+		5.25"/360 kB floppy services are supported (int 13h)
+		5.25"/1.2 MB floppy services are supported (int 13h)
+		3.5"/720 kB floppy services are supported (int 13h)
+		3.5"/2.88 MB floppy services are supported (int 13h)
+		Print screen service is supported (int 5h)
+		8042 keyboard services are supported (int 9h)
+		Serial services are supported (int 14h)
+		Printer services are supported (int 17h)
+		CGA/mono video services are supported (int 10h)
+		AGP is supported
+		LS-120 boot is supported
+		ATAPI Zip drive boot is supported
+		BIOS boot specification is supported
+
+Handle 0x004F, DMI type 13, 22 bytes
+BIOS Language Information
+	Language Description Format: Abbreviated
+	Installable Languages: 1
+		enUS
+	Currently Installed Language: enUS
+
+------------------------------------------------------------
